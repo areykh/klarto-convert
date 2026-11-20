@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://areykh.github.io/klarto-convert/sitemap.xml

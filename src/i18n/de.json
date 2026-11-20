@@ -1,0 +1,749 @@
+{
+  "lang": "de",
+  "langName": "Deutsch",
+  "locale": "de-DE",
+  "site": {
+    "name": "Klarto Convert",
+    "skip": "Zum Inhalt springen",
+    "languageLabel": "Sprache",
+    "allTools": "Alle Tools",
+    "footerProject": "Klarto – ein Projekt von {owner}",
+    "privacy": "Datenschutz",
+    "licenses": "Lizenzen",
+    "source": "Quellcode",
+    "localNote": "Ihre Datei bleibt auf Ihrem Gerät: Die Umwandlung läuft in Ihrem Browser, und nichts wird hochgeladen."
+  },
+  "sections": {
+    "howTo": "So gehen Sie vor",
+    "rules": "So funktioniert die Umwandlung",
+    "faq": "Fragen und Antworten",
+    "related": "Verwandte Tools"
+  },
+  "ui": {
+    "toolHeading": "Konverter",
+    "chooseFile": "Datei auswählen",
+    "dropHint": "oder hierher ziehen",
+    "pasteLabel": "Oder den Text hier einfügen",
+    "convert": "Umwandeln",
+    "sample": "Beispiel ausprobieren",
+    "clear": "Leeren",
+    "options": "Optionen",
+    "cancel": "Abbrechen",
+    "result": "Ergebnis",
+    "resultText": "Vorschau des Ergebnisses",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "copyFailed": "Kopieren fehlgeschlagen",
+    "download": "{name} herunterladen ({size})",
+    "fileChosen": "{name} ({size})",
+    "bytes": "{n} Byte",
+    "kb": "{n} KB",
+    "mb": "{n} MB",
+    "working": "Wird verarbeitet …",
+    "phase": {
+      "reading": "Datei wird gelesen …",
+      "parsing": "Daten werden gelesen …",
+      "converting": "Wird umgewandelt …",
+      "writing": "Excel-Datei wird geschrieben …"
+    },
+    "elapsed": "{seconds} s",
+    "largeFile": "große Datei, das kann eine Weile dauern",
+    "largeExcel": "große Excel-Dateien brauchen viel Arbeitsspeicher und Zeit",
+    "done": "Fertig in {seconds} s.",
+    "doneSize": "Fertig in {seconds} s: {size}.",
+    "failed": "Die Umwandlung ist fehlgeschlagen.",
+    "cancelled": "Abgebrochen.",
+    "lineCol": "Zeile {line}, Spalte {col}",
+    "lineOnly": "Zeile {line}",
+    "previewCut": "Die Vorschau zeigt die ersten {n} Zeichen. Der Download enthält alles.",
+    "previewRows": "Vorschau der ersten {rows} Zeilen",
+    "timesMore": "({n} weitere)",
+    "auto": "Automatisch",
+    "topLevel": "oberste Ebene",
+    "rowsOption": "{path} ({count} Einträge)",
+    "wholeDocument": "Ganzes Dokument als eine Zeile",
+    "sheetOption": "{name} ({rows} Zeilen)",
+    "sheetHidden": "{name} ({rows} Zeilen, ausgeblendet)",
+    "valid": "Wohlgeformtes XML",
+    "invalid": "Nicht wohlgeformt",
+    "validStats": "Wurzelelement <{root}>, {elements} Elemente, Verschachtelungstiefe {depth}.",
+    "validNoDtd": "Die DOCTYPE-Deklaration wurde gelesen, das Dokument aber nicht gegen die DTD validiert.",
+    "delim": {
+      "comma": "Komma",
+      "semicolon": "Semikolon",
+      "tab": "Tabulator",
+      "pipe": "senkrechter Strich |"
+    },
+    "opt": {
+      "consistent": "Wiederholte Elemente überall als Array",
+      "forceArrays": "Immer als Array (Elementnamen)",
+      "indent": "Einrückung",
+      "rootName": "Name des Wurzelelements",
+      "itemName": "Name für Listeneinträge",
+      "declaration": "XML-Deklaration hinzufügen",
+      "rows": "Zeilen aus",
+      "detect": "Zahlen und Datumswerte erkennen",
+      "sheet": "Tabellenblatt",
+      "header": "Erste Zeile ist Kopfzeile",
+      "nested": "Spaltennamen mit Punkt verschachteln (a.b, a.0)",
+      "rowName": "Name des Zeilenelements",
+      "delimiter": "Trennzeichen",
+      "decimal": "Dezimaltrennzeichen",
+      "bom": "UTF-8-BOM für Excel",
+      "types": "Zahlen und true/false umwandeln",
+      "dates": "ISO-Datumswerte als Excel-Datum"
+    },
+    "optValues": {
+      "indent": {
+        "2": "2 Leerzeichen",
+        "4": "4 Leerzeichen",
+        "0": "Keine (eine Zeile)"
+      },
+      "delimiter": {
+        "auto": "Automatisch",
+        "comma": "Komma ,",
+        "semicolon": "Semikolon ;",
+        "tab": "Tabulator",
+        "pipe": "Senkrechter Strich |"
+      },
+      "decimal": {
+        "auto": "Automatisch",
+        ".": "Punkt 1.5",
+        ",": "Komma 1,5"
+      }
+    },
+    "check": "Prüfen",
+    "unsupported": "Nicht geprüft: Das Dokument verwendet eine Funktion, die dieser Validator nicht unterstützt"
+  },
+  "errors": {
+    "input.empty": "Die Eingabe ist leer. Wählen Sie eine Datei aus oder fügen Sie Text ein.",
+    "input.readFailed": "Der Browser konnte die Datei {name} nicht lesen.",
+    "decode.unknownEncoding": "Die XML-Deklaration nennt die Kodierung „{encoding}“, die dieser Browser nicht lesen kann. Speichern Sie die Datei als UTF-8.",
+    "decode.utf16NoBom": "Die Datei gibt {encoding} an, hat aber keine Bytereihenfolge-Markierung (BOM). Speichern Sie sie als UTF-8 oder als UTF-16 mit BOM.",
+    "decode.invalidUtf8Xml": "Die Datei ist an dieser Stelle kein gültiges UTF-8. Speichern Sie sie als UTF-8, oder geben Sie ihre tatsächliche Kodierung in der XML-Deklaration an, zum Beispiel <?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>.",
+    "decode.invalidUtf8": "Die Datei ist an dieser Stelle kein gültiges UTF-8. Speichern Sie sie als UTF-8 und versuchen Sie es erneut.",
+    "xml.invalidChar": "Das Zeichen {code} ist in XML 1.0 nicht erlaubt.",
+    "xml.badXmlDecl": "Die XML-Deklaration ist fehlerhaft. Sie sollte so aussehen: <?xml version=\"1.0\" encoding=\"UTF-8\"?>.",
+    "xml.misplacedXmlDecl": "Die XML-Deklaration <?xml …?> muss ganz am Anfang der Datei stehen. Entfernen Sie Leerzeilen, Leerzeichen oder anderen Inhalt davor.",
+    "xml.unclosedComment": "Dieser Kommentar wird nie mit --> geschlossen.",
+    "xml.doubleHyphen": "Zwei Bindestriche (--) sind innerhalb eines Kommentars nicht erlaubt.",
+    "xml.cdataOutsideRoot": "Ein CDATA-Abschnitt ist nur innerhalb des Wurzelelements erlaubt.",
+    "xml.unclosedCdata": "Dieser CDATA-Abschnitt wird nie mit ]]> geschlossen.",
+    "xml.badMarkup": "Unbekanntes Markup nach „<!“. Erwartet wurde ein Kommentar <!-- -->, ein CDATA-Abschnitt <![CDATA[ ]]> oder <!DOCTYPE>.",
+    "xml.badPI": "Fehlerhafte Verarbeitungsanweisung. Sie sollte so aussehen: <?name data?>.",
+    "xml.unclosedPI": "Diese Verarbeitungsanweisung wird nie mit ?> geschlossen.",
+    "xml.badDoctype": "Die DOCTYPE-Deklaration ist fehlerhaft.",
+    "xml.misplacedDoctype": "Die DOCTYPE-Deklaration darf nur einmal vorkommen, und zwar vor dem Wurzelelement.",
+    "xml.unexpectedEof": "Die Datei endet mitten in einem Tag.",
+    "xml.badTagStart": "Auf „<“ muss ein Tag-Name folgen, hier folgt aber „{char}“. Für ein Kleiner-als-Zeichen im Text schreiben Sie &lt;.",
+    "xml.multipleRoots": "Hier beginnt ein zweites Wurzelelement <{name}>. Ein XML-Dokument hat genau ein Wurzelelement (hier <{root}>); fassen Sie beide in einem gemeinsamen Element zusammen.",
+    "xml.expectedTagEnd": "Erwartet wurde „>“ als Ende des Tags {name}.",
+    "xml.badAttrName": "Ungültiges Zeichen „{char}“ im Tag <{name}>. Attributnamen beginnen mit einem Buchstaben oder einem Unterstrich.",
+    "xml.missingSpace": "Die Attribute in <{name}> müssen durch ein Leerzeichen getrennt sein.",
+    "xml.attrNoValue": "Das Attribut „{name}“ hat keinen Wert. In XML braucht jedes Attribut einen Wert in Anführungszeichen, zum Beispiel {name}=\"…\".",
+    "xml.attrNotQuoted": "Der Wert des Attributs „{name}“ muss in doppelten oder einfachen Anführungszeichen stehen.",
+    "xml.unclosedAttr": "Dem Wert des Attributs „{name}“ fehlt das schließende Anführungszeichen.",
+    "xml.ltInAttr": "„<“ ist im Wert des Attributs „{name}“ nicht erlaubt. Schreiben Sie stattdessen &lt;.",
+    "xml.duplicateAttr": "Das Attribut „{name}“ kommt im selben Element zweimal vor.",
+    "xml.reservedPrefix": "„{name}“ verwendet einen reservierten Namen falsch: Die Präfixe xml und xmlns sind durch den Standard „Namespaces in XML“ festgelegt.",
+    "xml.emptyNsUri": "Die Namensraum-Deklaration {name}=\"\" ist leer. Ein Präfix muss an einen nicht leeren URI gebunden sein.",
+    "xml.badQName": "„{name}“ ist kein gültiger Name im Sinne der Namensräume: Verwenden Sie höchstens einen Doppelpunkt, und zwar nicht am Anfang oder am Ende.",
+    "xml.undeclaredPrefix": "Das Namensraum-Präfix „{prefix}“ in „{name}“ ist nicht deklariert. Fügen Sie xmlns:{prefix}=\"…\" zu diesem Element oder einem seiner Elternelemente hinzu.",
+    "xml.badEndTag": "Fehlerhaftes schließendes Tag. Es sollte so aussehen: </name>.",
+    "xml.unexpectedEndTag": "Zum schließenden Tag </{name}> gibt es kein passendes öffnendes Tag.",
+    "xml.mismatchedTag": "Das schließende Tag </{found}> passt nicht zum offenen Element <{expected}> (geöffnet in Zeile {openLine}, Spalte {openCol}).",
+    "xml.textBeforeRoot": "Text vor dem Wurzelelement. Ein XML-Dokument muss mit „<“ beginnen.",
+    "xml.textAfterRoot": "Text nach dem Ende des Wurzelelements. Der gesamte Inhalt muss im Wurzelelement stehen.",
+    "xml.cdataEndInText": "Die Zeichenfolge ]]> ist im Text nicht erlaubt. Schreiben Sie stattdessen ]]&gt;.",
+    "xml.bareAmpersand": "Nicht maskiertes „&“. Schreiben Sie &amp; für ein kaufmännisches Und in Text und in Attributwerten.",
+    "xml.badCharRef": "Die Zeichenreferenz {ref} steht für ein Zeichen, das XML 1.0 nicht erlaubt.",
+    "xml.undefinedEntity": "Die Entität &{name}; ist nicht definiert. Ohne eine DOCTYPE-Deklaration, die sie definiert, kennt XML nur &lt; &gt; &amp; &apos; und &quot;. Für ein geschütztes Leerzeichen schreiben Sie &#160;.",
+    "xml.externalEntity": "Die Entität &{name}; verweist auf eine externe Datei. Externe Entitäten werden nie geladen.",
+    "xml.entityLoop": "Die Entität &{name}; verweist auf sich selbst.",
+    "xml.entityMarkup": "Die Entität &{name}; enthält Markup. Unterstützt werden nur Entitäten mit reinem Text.",
+    "xml.entityExpansionLimit": "Die Auflösung der Entitäten wurde bei der Entität &{name}; gestoppt: Aufgelöst ergäbe das Dokument mehr als eine Million Zeichen oder mehr als 100.000 Entitätsreferenzen. Das schützt vor „Billion Laughs“-Dateien.",
+    "xml.unclosedTag": "Das Element <{name}> (geöffnet in Zeile {openLine}, Spalte {openCol}) wird nie geschlossen.",
+    "xml.noRoot": "Kein Wurzelelement gefunden: Die Eingabe enthält kein XML-Element.",
+    "json.comment": "Kommentare sind in JSON nicht erlaubt.",
+    "json.unterminatedString": "Dieser Zeichenkette fehlt das schließende doppelte Anführungszeichen.",
+    "json.badEscape": "Ungültige Escape-Sequenz {esc}. Erlaubt sind \\\" \\\\ \\/ \\b \\f \\n \\r \\t und \\u mit vier Hexadezimalziffern.",
+    "json.newlineInString": "Zeilenumbruch innerhalb einer Zeichenkette. Schreiben Sie ihn als \\n, oder schließen Sie die Zeichenkette mit einem doppelten Anführungszeichen.",
+    "json.controlChar": "Das Steuerzeichen {code} muss innerhalb einer Zeichenkette maskiert werden, zum Beispiel \\t für einen Tabulator.",
+    "json.badNumber": "„{token}“ ist keine gültige JSON-Zahl. JSON-Zahlen haben keine führenden Nullen, kein Pluszeichen und keinen Punkt am Anfang oder Ende (schreiben Sie 0.5, nicht .5).",
+    "json.singleQuote": "JSON braucht doppelte Anführungszeichen um Zeichenketten und Schlüssel; einfache Anführungszeichen sind nicht erlaubt.",
+    "json.badLiteral": "„{token}“ ist kein JSON-Wert. Verwenden Sie true, false, null, eine Zahl oder Text in doppelten Anführungszeichen.",
+    "json.unexpectedChar": "Unerwartetes Zeichen „{char}“.",
+    "json.unexpectedEnd": "Das JSON endet zu früh: Es fehlt ein Wert, eine schließende eckige Klammer oder eine schließende geschweifte Klammer.",
+    "json.trailingComma": "Komma vor einer schließenden Klammer. Entfernen Sie das letzte Komma.",
+    "json.keyNotString": "Objektschlüssel müssen Text in doppelten Anführungszeichen sein, gefunden wurde aber „{char}“.",
+    "json.missingColon": "Nach dem Schlüssel wurde „:“ erwartet, gefunden wurde aber „{char}“.",
+    "json.missingComma": "Erwartet wurde „,“ oder „{close}“, gefunden wurde aber „{char}“. Wahrscheinlich fehlt ein Komma.",
+    "json.extraData": "Nach dem Ende des JSON-Werts folgen weitere Daten. Eine JSON-Datei enthält einen einzigen Wert. Für einen Wert pro Zeile (JSON Lines) verwenden Sie „JSON in CSV“ oder „JSON in Excel“.",
+    "json.invalid": "Das JSON konnte nicht gelesen werden: {detail}",
+    "json.invalidXmlChar": "Der Wert bei {path} enthält das Zeichen {code}, das in XML 1.0 nicht vorkommen darf.",
+    "csv.unclosedQuote": "Hier beginnt ein Feld in Anführungszeichen, aber sein schließendes doppeltes Anführungszeichen fehlt.",
+    "excel.notWorkbook": "Diese Datei ist keine Arbeitsmappe einer Tabellenkalkulation (.xlsx, .xlsm, .xlsb, .xls oder .ods). Für CSV-Dateien verwenden Sie die CSV-Tools.",
+    "excel.encrypted": "Diese Arbeitsmappe ist kennwortgeschützt. Öffnen Sie sie in Excel, entfernen Sie das Kennwort und speichern Sie sie erneut.",
+    "excel.unreadable": "Die Arbeitsmappe konnte nicht gelesen werden; möglicherweise ist sie beschädigt. Details: {detail}",
+    "excel.noSheets": "Die Arbeitsmappe enthält keine Tabellenblätter.",
+    "excel.noSuchSheet": "Das Tabellenblatt „{name}“ wurde nicht gefunden.",
+    "excel.tooManyRows": "{rows} Zeilen passen nicht auf ein Excel-Tabellenblatt (höchstens {max} Zeilen).",
+    "excel.tooManyCols": "{cols} Spalten passen nicht auf ein Excel-Tabellenblatt (höchstens {max} Spalten).",
+    "general.noData": "Es gibt keine Daten zum Schreiben.",
+    "general.tooDeep": "Die Daten sind zu tief verschachtelt, um sie umzuwandeln.",
+    "general.tooLarge": "Die Datei ist zu groß für den Arbeitsspeicher, den dieser Browser-Tab nutzen kann. Versuchen Sie es mit einer kleineren Datei, oder teilen Sie sie auf.",
+    "general.crashed": "Der Browser hat die Umwandlung abgebrochen, wahrscheinlich weil der Tab keinen Arbeitsspeicher mehr hatte. Versuchen Sie es mit einer kleineren Datei, oder schließen Sie andere Tabs und versuchen Sie es erneut.",
+    "general.unexpected": "Unerwarteter Fehler: {detail}"
+  },
+  "warnings": {
+    "json.renamedKey": "Einige Schlüssel sind keine gültigen XML-Namen und wurden umbenannt, zum Beispiel „{from}“ in {to}.",
+    "json.attrNotPrimitive": "Das Attribut {path} enthält ein Objekt oder ein Array; es wurde als JSON-Text geschrieben.",
+    "json.undeclaredPrefix": "Das Präfix „{prefix}“ (in {name}) wird ohne Deklaration xmlns:{prefix} verwendet. Das XML ist daher im Sinne der Namensräume nicht wohlgeformt.",
+    "json.unsafeInteger": "Es wurde eine ganze Zahl größer als 9.007.199.254.740.991 gefunden. Browser runden solche Zahlen beim Lesen von JSON; schreiben Sie lange IDs als Zeichenketten in Anführungszeichen.",
+    "json.wrappedInRoot": "Das JSON hat nicht genau einen Schlüssel auf oberster Ebene, daher wird das Ergebnis in <{root}> eingeschlossen.",
+    "csv.textAfterQuote": "Zeile {line}: Auf ein schließendes Anführungszeichen folgt Text; er wurde als Teil des Felds übernommen.",
+    "csv.fieldCount": "Zeile {line} hat {found} Felder, die Kopfzeile hat {expected}. Fehlende Felder bleiben leer; zusätzliche Felder erhalten Spalten namens column_N.",
+    "csv.fieldCountRows": "Insgesamt haben {rows} Zeilen eine andere Anzahl von Feldern als die Kopfzeile.",
+    "excel.cellTruncated": "Zelle {cell} hat {length} Zeichen, Excel erlaubt aber nur {max}. Der Text wurde gekürzt.",
+    "xml.unexpandedEntity": "Die Entität &{name}; ist in einer DTD oder einer externen Datei definiert, die nicht gelesen wird. Sie wurde daher unverändert übernommen.",
+    "json.emptyNsUri": "Die Namensraum-Deklaration xmlns:{prefix}=\"\" ist leer, was XML-Namensräume nicht erlauben; sie wurde weggelassen.",
+    "flatten.headerClash": "Zwei Werte gehören zur Spalte {header} (ein Schlüssel, der einen Punkt enthält, und ein verschachtelter Schlüssel); behalten wurde der erste Wert."
+  },
+  "info": {
+    "info.elements": "{count} Elemente, Wurzelelement <{root}>.",
+    "info.rowsFrom": "Zeilen aus {path}: {count}.",
+    "info.wholeDocument": "Das ganze Dokument ist eine Zeile.",
+    "info.columns": "{count} Spalten.",
+    "info.jsonLines": "Als JSON Lines gelesen: {count} Werte, einer pro Zeile.",
+    "info.delimiter": "Trennzeichen: {name}.",
+    "info.records": "{count} Datenzeilen.",
+    "info.decimal": "Dezimaltrennzeichen für Zahlen: „{sep}“.",
+    "info.sheet": "Tabellenblatt „{name}“: {rows} Zeilen.",
+    "info.encoding": "Gelesen als {encoding}.",
+    "decode.readAs1252": "Die Datei ist kein gültiges UTF-8 und wurde daher als Windows-1252 gelesen, die übliche Kodierung älterer Excel-Exporte in Westeuropa. Wenn Zeichen falsch aussehen, speichern Sie die Datei als UTF-8."
+  },
+  "rules": {
+    "xmlJson": {
+      "title": "Zuordnung zwischen XML und JSON",
+      "items": [
+        "Jedes Element wird zu einem Schlüssel mit dem Namen des Elements. Namensraum-Präfixe bleiben Teil des Namens: `soap:Body`.",
+        "Attribute werden zu Schlüsseln mit vorangestelltem „@“: `id=\"7\"` wird zu `\"@id\": \"7\"`. Namensraum-Deklarationen bleiben auf dieselbe Weise erhalten, als `\"@xmlns:soap\"`.",
+        "Ein Element, das nur Text enthält, wird zu diesem Text. Hat es zusätzlich Attribute oder Kindelemente, steht sein Text unter `\"#text\"`: Aus `<price currency=\"EUR\">12.50</price>` wird `{\"price\": {\"@currency\": \"EUR\", \"#text\": \"12.50\"}}`.",
+        "Elemente, die sich unter demselben Elternelement wiederholen, werden zu einem Array, in der Reihenfolge des Dokuments. Abwechselnde Namen werden gruppiert; die Reihenfolge zwischen verschiedenen Namen bleibt also nicht erhalten.",
+        "CDATA-Abschnitte werden zu normalem Text. Kommentare, Verarbeitungsanweisungen und die DOCTYPE-Deklaration entfallen. Entitäten, die nur in einer externen DTD definiert sind, etwa `&nbsp;` in XHTML, bleiben so stehen, wie sie geschrieben sind; ein Hinweis weist darauf hin.",
+        "Ein leeres Element wie `<note/>` wird zu `\"\"`. Leerraum zwischen Elementen entfällt, und am Anfang und Ende von Text wird Leerraum entfernt, außer innerhalb von `xml:space=\"preserve\"`.",
+        "Alle Werte bleiben Zeichenketten, weil XML keine Datentypen kennt: `\"00123\"` behält seine führenden Nullen."
+      ]
+    },
+    "jsonToXml": {
+      "title": "Von JSON zu XML",
+      "items": [
+        "Ein Objekt mit genau einem Schlüssel (dessen Wert kein Array ist) ergibt das Wurzelelement. Alles andere wird in das Wurzelelement eingeschlossen, dessen Name in den Optionen steht.",
+        "Schlüssel, die mit „@“ beginnen, werden zu Attributen, `\"#text\"` wird zum Text des Elements.",
+        "Ein Array wird zu wiederholten Elementen mit dem Namen des Schlüssels. Arrays in Arrays werden eingeschlossen, und ihre Einträge erhalten den Namen aus der Option „Name für Listeneinträge“.",
+        "`null` und `\"\"` werden zu einem leeren Element, zum Beispiel `<note/>`. Ein leeres Array erzeugt kein Element.",
+        "Schlüssel, die keine gültigen XML-Namen sind, werden angepasst: Ungültige Zeichen werden zu „_“, und ein Name, der mit einer Ziffer beginnt, erhält ein „_“ davor."
+      ]
+    },
+    "flatten": {
+      "title": "Die Array-Regel: verschachtelte Daten in Spalten",
+      "items": [
+        "Verschachtelte Objekte ergeben Spaltennamen mit Punkten: `customer.name`, `customer.address.city`.",
+        "Arrays ergeben nummerierte Spalten, beginnend bei 0: `tags.0`, `tags.1`. Arrays von Objekten kombinieren beides: `items.0.sku`, `items.0.qty`, `items.1.sku`.",
+        "Ein leeres Objekt oder Array ergibt eine leere Zelle unter seinem eigenen Spaltennamen.",
+        "Die Spalten erscheinen in der Reihenfolge, in der sie zuerst vorkommen. Fehlt einer Zeile ein Wert, bleibt die Zelle leer.",
+        "Die Zeilen kommen aus einem Array auf oberster Ebene, falls es eines gibt. Sonst wird das größte Array von Objekten verwendet, zum Beispiel `orders`; unter „Zeilen aus“ können Sie ein anderes wählen. Ohne ein solches Array ist das ganze Dokument eine Zeile."
+      ]
+    },
+    "unflatten": {
+      "title": "Von Spaltennamen mit Punkt zurück zur Verschachtelung",
+      "items": [
+        "Ist „Spaltennamen mit Punkt verschachteln“ eingeschaltet, wird eine Spalte `address.city` zu `{\"address\": {\"city\": …}}`.",
+        "Nummerierte Teile werden zu Arrays, wenn sie lückenlos 0, 1, 2 … durchlaufen: `tags.0` und `tags.1` werden zu `\"tags\": [\"a\", \"b\"]`.",
+        "Das kehrt die Array-Regel von „JSON in CSV“ und „JSON in Excel“ um. Gibt es sowohl eine Spalte `a` als auch eine Spalte `a.b`, behält `a.b` seinen flachen Namen."
+      ]
+    },
+    "csvRead": {
+      "title": "So wird CSV gelesen",
+      "items": [
+        "Trennzeichen: Komma, Semikolon, Tabulator oder senkrechter Strich, aus den ersten Zeilen erkannt oder von Ihnen festgelegt.",
+        "Felder in doppelten Anführungszeichen dürfen das Trennzeichen, Zeilenumbrüche und Anführungszeichen enthalten; Anführungszeichen werden dabei verdoppelt (`\"\"`), wie in RFC 4180. Die Zeilenenden CRLF, LF und CR funktionieren alle. Völlig leere Zeilen werden übersprungen.",
+        "Kodierung: UTF-8 mit oder ohne Bytereihenfolge-Markierung (BOM) und UTF-16 mit BOM. Eine Datei, die kein gültiges UTF-8 ist, wird als Windows-1252 gelesen, und das Ergebnis weist darauf hin.",
+        "Zahlen: Steht das Dezimaltrennzeichen auf „Automatisch“, gilt ein Komma, wenn das Trennzeichen ein Semikolon ist (das übliche europäische CSV), sonst ein Punkt. Werte mit führenden Nullen (`01067`), einem führenden Pluszeichen (Telefonnummern) oder mehr als 15 Ziffern bleiben Text. Tausendertrennzeichen werden nicht erkannt, weil `1.234` sowohl 1234 als auch 1,234 bedeuten kann: Solche Werte bleiben Text, außer ihr Punkt oder Komma ist das Dezimaltrennzeichen."
+      ]
+    },
+    "csvWrite": {
+      "title": "So wird CSV geschrieben",
+      "items": [
+        "Felder, die das Trennzeichen, ein doppeltes Anführungszeichen oder einen Zeilenumbruch enthalten, werden in doppelte Anführungszeichen gesetzt; Anführungszeichen darin werden verdoppelt. Zeilen enden mit CRLF.",
+        "Mit Dezimalkomma werden JSON-Zahlen als `1,5` geschrieben. Textwerte werden nie verändert.",
+        "Die UTF-8-Bytereihenfolge-Markierung (BOM, drei Bytes am Anfang) sorgt dafür, dass Excel die Datei als UTF-8 öffnet. So werden Zeichen wie ü, é oder ж richtig angezeigt."
+      ]
+    },
+    "excelRead": {
+      "title": "So wird die Arbeitsmappe gelesen",
+      "items": [
+        "Formate: .xlsx, .xlsm, .xlsb, .xls (Excel 97–2003) und .ods (LibreOffice, OpenOffice). Ein Tabellenblatt pro Umwandlung; Sie wählen es nach dem Laden aus.",
+        "Zahlenzellen bleiben Zahlen, Textzellen bleiben Text: Eine als Text gespeicherte Postleitzahl wie `01067` behält ihre führende Null. WAHR und FALSCH werden zu booleschen Werten, Fehlerzellen zu ihrem Code wie `#DIV/0!`, leere Zellen zu `null` (in XML zu einem leeren Element).",
+        "Als Datum formatierte Zellen werden zu ISO-8601-Text: `2026-11-20`, `2026-11-20T14:30:00` oder `14:30:00` für eine Uhrzeit; eine Zeitzone wird nicht hinzugefügt. Arbeitsmappen mit dem 1904-Datumssystem werden korrekt verarbeitet.",
+        "Bei Formeln wird das in der Datei gespeicherte Ergebnis verwendet; nichts wird neu berechnet. Eine verbundene Zelle hat ihren Wert nur in der Zelle oben links.",
+        "Leere Überschriftenzellen heißen `column_N`, doppelte Überschriften erhalten `_2`, `_3`."
+      ]
+    },
+    "excelToXml": {
+      "title": "Vom Tabellenblatt zu XML",
+      "items": [
+        "Jede Zeile unter der Kopfzeile wird zu einem Element (standardmäßig `<row>`) innerhalb des Wurzelelements (standardmäßig `<rows>`); jede Spalte wird zu einem Kindelement, das nach ihrer Überschrift benannt ist.",
+        "Überschriften, die keine gültigen XML-Namen sind, werden angepasst: Leerzeichen und andere ungültige Zeichen werden zu „_“. Eine Überschrift, die mit „@“ beginnt, wird zu einem Attribut.",
+        "Ist „Spaltennamen mit Punkt verschachteln“ eingeschaltet, wird `address.city` zu `<address><city>…</city></address>`."
+      ]
+    },
+    "excelWrite": {
+      "title": "So wird die Excel-Datei geschrieben",
+      "items": [
+        "Ist „Zahlen und Datumswerte erkennen“ eingeschaltet, werden Werte wie `24.90` zu Zahlen und ISO-Datumswerte wie `2026-11-20` oder `2026-11-20 14:30` zu Datumszellen. Andere Datumsformate wie `20.11.2026` bleiben Text.",
+        "Werte mit führenden Nullen, einem führenden Pluszeichen oder mehr als 15 Ziffern bleiben Text, weil Excel sonst die Nullen entfernen oder die Ziffern runden würde.",
+        "Die erste Zeile ist die Kopfzeile: Sie erhält einen AutoFilter, und die Spaltenbreiten richten sich nach den ersten 200 Zeilen. Weitere Formatierungen gibt es nicht.",
+        "Ein Tabellenblatt fasst höchstens 1.048.576 Zeilen und 16.384 Spalten, eine Zelle höchstens 32.767 Zeichen. Größere Daten werden abgelehnt, längerer Text wird mit einer Warnung gekürzt."
+      ]
+    },
+    "excelWriteJson": {
+      "title": "So wird die Excel-Datei geschrieben",
+      "items": [
+        "JSON-Typen bleiben erhalten: Zahlen werden zu Zahlenzellen, true und false zu Wahrheitswerten, Zeichenketten zu Textzellen; `\"01067\"` bleibt also Text.",
+        "Ist „ISO-Datumswerte als Excel-Datum“ eingeschaltet, werden Zeichenketten wie `2026-11-20` oder `2026-11-20T14:30:00` zu Datumszellen. Zeichenketten mit Zeitzone (`Z` oder `+02:00`) bleiben Text, weil Excel-Zellen keine Zeitzone kennen.",
+        "Die erste Zeile ist die Kopfzeile: Sie erhält einen AutoFilter, und die Spaltenbreiten richten sich nach den ersten 200 Zeilen.",
+        "Ein Tabellenblatt fasst höchstens 1.048.576 Zeilen und 16.384 Spalten, eine Zelle höchstens 32.767 Zeichen. Größere Daten werden abgelehnt, längerer Text wird mit einer Warnung gekürzt."
+      ]
+    },
+    "validator": {
+      "title": "Was geprüft wird",
+      "items": [
+        "Die Wohlgeformtheit nach XML 1.0 und Namespaces in XML 1.0: ein Wurzelelement, passende und korrekt verschachtelte Tags, Attribute in Anführungszeichen und ohne Doppelungen, gültige Namen und Zeichen, definierte Entitäten, deklarierte Namensraum-Präfixe.",
+        "Die Prüfung stoppt beim ersten Fehler und zeigt seine Zeile und Spalte mit dem umgebenden Text.",
+        "Das Dokument wird nicht gegen eine DTD oder ein XML-Schema (XSD) validiert. Externe Dateien werden nie geladen; Entitäten, die nur dort definiert sind, etwa `&nbsp;` in XHTML, werden in einem Hinweis aufgeführt."
+      ]
+    }
+  },
+  "tools": {
+    "xml-to-json": {
+      "slug": "xml-in-json",
+      "name": "XML in JSON",
+      "short": "Mit Attributen, Namensräumen und CDATA.",
+      "title": "XML in JSON umwandeln – kostenlos, ohne Upload | Klarto",
+      "description": "XML im Browser in JSON umwandeln. Attribute werden zu @-Schlüsseln, wiederholte Elemente zu Arrays, CDATA zu Text. Ihre Datei wird nicht hochgeladen.",
+      "h1": "XML in JSON umwandeln",
+      "intro": "Wählen Sie eine XML-Datei aus oder fügen Sie XML ein. Sie erhalten JSON nach einer dokumentierten, umkehrbaren Zuordnung. Fehler im XML werden mit Zeile und Spalte angezeigt.",
+      "steps": [
+        "Wählen Sie eine XML-Datei aus, ziehen Sie sie auf das Feld oder fügen Sie XML in das Textfeld ein. Klicken Sie dann auf „Umwandeln“.",
+        "Prüfen Sie die Optionen: ob wiederholte Elemente überall zu Arrays werden, welche Elemente immer Arrays sein sollen und wie weit eingerückt wird.",
+        "Sehen Sie sich die Vorschau an. Laden Sie dann die .json-Datei herunter oder kopieren Sie das Ergebnis.",
+        "Enthält das XML einen Fehler, nennt die Meldung Zeile und Spalte. Beheben Sie ihn und wandeln Sie erneut um."
+      ],
+      "faq": [
+        {
+          "q": "Wie werden Attribute und Text im JSON gespeichert?",
+          "a": "Jedes Attribut wird zu einem Schlüssel mit „@“ vor seinem Namen; aus id=\"7\" wird also \"@id\": \"7\". Ein Element, das nur Text enthält, wird zu diesem Text. Hat das Element zusätzlich Attribute oder Kindelemente, steht der Text unter \"#text\"."
+        },
+        {
+          "q": "Warum stehen alle Zahlen in Anführungszeichen?",
+          "a": "XML kennt keine Datentypen, daher wird jeder Wert als Zeichenkette übernommen. Würde man \"00123\" oder \"1e5\" in Zahlen umwandeln, würden sich die Daten ändern. Wandeln Sie die Typen in Ihrem eigenen Code um, wo Sie wissen, welche Felder Zahlen sind."
+        },
+        {
+          "q": "Wann wird ein Element zu einem Array?",
+          "a": "Wenn es unter demselben Elternelement mehr als einmal vorkommt. Ist „Wiederholte Elemente überall als Array“ eingeschaltet (Standard), wird ein Element, das sich irgendwo wiederholt, in jedem Datensatz am selben Pfad zu einem Array. So haben alle Datensätze dieselbe Form. Elemente, die sich in dieser Datei nie wiederholen, tragen Sie unter „Immer als Array“ ein."
+        },
+        {
+          "q": "Was passiert mit Namensräumen, Kommentaren und CDATA?",
+          "a": "Präfixe bleiben in den Namen erhalten, etwa \"soap:Body\", und Namensraum-Deklarationen bleiben als \"@xmlns\"-Schlüssel erhalten. So liefert „JSON in XML“ dieselben Namensräume zurück. CDATA-Abschnitte werden zu normalem Text. Kommentare und Verarbeitungsanweisungen entfallen."
+        }
+      ]
+    },
+    "json-to-xml": {
+      "slug": "json-in-xml",
+      "name": "JSON in XML",
+      "short": "@-Schlüssel werden Attribute, Arrays wiederholte Elemente.",
+      "title": "JSON in XML umwandeln – kostenlos, ohne Upload | Klarto",
+      "description": "JSON im Browser in wohlgeformtes XML umwandeln: @-Schlüssel werden Attribute, #text wird Text, Arrays werden wiederholte Elemente. Kein Upload.",
+      "h1": "JSON in XML umwandeln",
+      "intro": "Wählen Sie eine JSON-Datei aus oder fügen Sie JSON ein. Sie erhalten eingerücktes, wohlgeformtes XML. Die Zuordnung ist dieselbe wie im Tool „XML in JSON“, Sie können also in beide Richtungen umwandeln.",
+      "steps": [
+        "Wählen Sie eine JSON-Datei aus, ziehen Sie sie auf das Feld oder fügen Sie JSON ein. Klicken Sie dann auf „Umwandeln“.",
+        "Legen Sie den Namen des Wurzelelements, den Namen für Einträge verschachtelter Listen und die Einrückung fest, und entscheiden Sie, ob die XML-Deklaration hinzugefügt wird.",
+        "Lesen Sie die Hinweise unter dem Ergebnis: Sie nennen umbenannte Schlüssel und andere Änderungen.",
+        "Laden Sie die .xml-Datei herunter oder kopieren Sie das Ergebnis."
+      ],
+      "faq": [
+        {
+          "q": "Welches Element wird zum Wurzelelement?",
+          "a": "Ist das JSON ein Objekt mit genau einem Schlüssel, dessen Wert kein Array ist, wird dieser Schlüssel zum Wurzelelement. Sonst wird der Inhalt in ein Wurzelelement mit dem Namen aus den Optionen eingeschlossen, standardmäßig „root“."
+        },
+        {
+          "q": "Wie erzeuge ich Attribute?",
+          "a": "Beginnen Sie den Schlüssel mit „@“, und verwenden Sie \"#text\" für den Text des Elements: {\"price\": {\"@currency\": \"EUR\", \"#text\": \"9.90\"}} ergibt <price currency=\"EUR\">9.90</price>."
+        },
+        {
+          "q": "Was passiert mit Arrays, null und leeren Zeichenketten?",
+          "a": "Ein Array wird zu einem Element pro Eintrag, jeweils mit dem Namen des Schlüssels. Arrays in Arrays werden in ein Element eingeschlossen, dessen Einträge „item“ heißen (den Namen können Sie ändern). null und \"\" werden zu einem leeren Element wie <note/>. Ein leeres Array erzeugt kein Element."
+        },
+        {
+          "q": "Was passiert, wenn ein Schlüssel kein gültiger XML-Name ist?",
+          "a": "Zeichen, die in XML-Namen nicht vorkommen dürfen, werden durch „_“ ersetzt, und ein Name, der mit einer Ziffer beginnt, erhält ein „_“ davor: Aus „first name“ wird first_name, aus „1st“ wird _1st. Die Hinweise unter dem Ergebnis nennen die umbenannten Schlüssel."
+        },
+        {
+          "q": "Welche Zeichen werden maskiert?",
+          "a": "&, < und > im Text sowie &, <, \" und außerdem Tabulatoren und Zeilenumbrüche in Attributwerten. Steuerzeichen, die XML 1.0 nicht erlaubt, etwa U+0001, stoppen die Umwandlung; die Meldung nennt den Pfad des Werts."
+        }
+      ]
+    },
+    "xml-to-excel": {
+      "slug": "xml-in-excel",
+      "name": "XML in Excel",
+      "short": "Eine Zeile pro Datensatz, Zahlen und Datumswerte als echte Zellen.",
+      "title": "XML in Excel umwandeln (XLSX) – ohne Upload | Klarto Convert",
+      "description": "XML im Browser in eine Excel-Datei (.xlsx) umwandeln: eine Zeile pro Datensatz, Attribute und Unterelemente als Spalten, Zahlen und Datumswerte als echte Zellen.",
+      "h1": "XML in Excel umwandeln (XLSX)",
+      "intro": "Wählen Sie eine XML-Datei aus oder fügen Sie XML ein. Sie erhalten eine .xlsx-Datei mit einer Zeile pro Datensatz. Verschachtelte Elemente und Attribute werden zu Spalten, deren Namen den Pfad mit Punkten angeben.",
+      "steps": [
+        "Wählen Sie eine XML-Datei aus, ziehen Sie sie auf das Feld oder fügen Sie XML ein. Klicken Sie dann auf „Umwandeln“.",
+        "Prüfen Sie „Zeilen aus“: Das Tool wählt die größte Liste wiederholter Elemente, etwa jedes <order>. Wählen Sie bei Bedarf eine andere Liste.",
+        "Prüfen Sie die Vorschau der ersten Zeilen.",
+        "Laden Sie die .xlsx-Datei herunter und öffnen Sie sie in Excel oder einem anderen Tabellenkalkulationsprogramm."
+      ],
+      "faq": [
+        {
+          "q": "Welche Elemente werden zu Zeilen?",
+          "a": "Die größte Liste wiederholter Elemente, die eigene Daten enthalten, zum Beispiel jedes <order> in <orders>. Nach der ersten Umwandlung können Sie unter „Zeilen aus“ eine andere Liste wählen oder das ganze Dokument als eine einzige Zeile."
+        },
+        {
+          "q": "Wie werden verschachtelte Elemente und Attribute zu Spalten?",
+          "a": "Die Spaltennamen folgen dem Pfad, getrennt durch Punkte: customer.name, item.0.@sku, item.1.@sku. Attribute beginnen mit „@“; der Text eines Elements, das auch Attribute hat, steht in einer Spalte, deren Name auf #text endet. Ein Element, das sich innerhalb eines Datensatzes wiederholt, erhält in jedem Datensatz nummerierte Spalten."
+        },
+        {
+          "q": "Sind Zahlen und Datumswerte echte Excel-Werte?",
+          "a": "Ist „Zahlen und Datumswerte erkennen“ eingeschaltet, wird 24.90 zu einer Zahl und 2026-11-20 zu einer Datumszelle. Werte mit führenden Nullen wie 01067, einem führenden Pluszeichen oder mehr als 15 Ziffern bleiben Text und werden so nicht verändert."
+        },
+        {
+          "q": "Wie groß darf die XML-Datei sein?",
+          "a": "Wir haben eine 20 MB große XML-Datei mit 102.973 Datensätzen getestet: Daraus entstand in 5,5 bis 7,5 Sekunden eine 12 MB große .xlsx-Datei (Node.js auf einem Laptop mit 4 Kernen). Große Dateien belegen deutlich mehr Arbeitsspeicher als ihre Dateigröße. Ein Excel-Tabellenblatt fasst höchstens 1.048.576 Zeilen und 16.384 Spalten."
+        }
+      ]
+    },
+    "excel-to-xml": {
+      "slug": "excel-in-xml",
+      "name": "Excel in XML",
+      "short": "Jedes Tabellenblatt in XML, Überschriften als Elementnamen.",
+      "title": "Excel in XML umwandeln – XLSX, XLS, ODS, ohne Upload | Klarto",
+      "description": "Ein Excel-Tabellenblatt (.xlsx, .xls, .ods) im Browser in XML umwandeln. Jede Zeile wird ein Element, jede Spaltenüberschrift ein Kindelement. Kein Upload.",
+      "h1": "Excel in XML umwandeln",
+      "intro": "Wählen Sie eine Arbeitsmappe aus, um eines ihrer Tabellenblätter in XML umzuwandeln: ein Element pro Zeile, ein Kindelement pro Spalte, Datumswerte in ISO 8601.",
+      "steps": [
+        "Wählen Sie eine .xlsx-, .xlsm-, .xlsb-, .xls- oder .ods-Datei aus, oder ziehen Sie sie auf das Feld.",
+        "Hat die Arbeitsmappe mehrere Tabellenblätter, wählen Sie eines in der Liste „Tabellenblatt“.",
+        "Legen Sie die Namen des Wurzel- und des Zeilenelements fest. Schalten Sie „Spaltennamen mit Punkt verschachteln“ ein, wenn Sie verschachteltes XML möchten.",
+        "Laden Sie die .xml-Datei herunter oder kopieren Sie das Ergebnis."
+      ],
+      "faq": [
+        {
+          "q": "Welche Dateien kann ich verwenden?",
+          "a": "Excel-Arbeitsmappen (.xlsx, .xlsm, .xlsb), alte Dateien aus Excel 97–2003 (.xls) und OpenDocument-Tabellen (.ods). Kennwortgeschützte Dateien lassen sich nicht lesen: Entfernen Sie zuerst das Kennwort in Excel. Für CSV-Dateien verwenden Sie „CSV in JSON“ und danach „JSON in XML“."
+        },
+        {
+          "q": "Wie sieht das XML aus?",
+          "a": "Jede Zeile unter der Kopfzeile wird zu einem <row>-Element innerhalb von <rows>, und jede Zelle wird zu einem Kindelement, das nach der Überschrift ihrer Spalte benannt ist. Beide Elemente können Sie umbenennen. Überschriften, die mit „@“ beginnen, werden zu Attributen, und leere Zellen werden zu leeren Elementen wie <note/>."
+        },
+        {
+          "q": "Wie werden Datumswerte und Formeln umgewandelt?",
+          "a": "Als Datum formatierte Zellen werden zu ISO-8601-Text, zum Beispiel 2026-11-20 oder 2026-11-20T14:30:00. Bei Formeln wird der in der Datei gespeicherte Wert verwendet; Formeln werden nicht neu berechnet."
+        },
+        {
+          "q": "Kann ich verschachteltes XML erzeugen?",
+          "a": "Ja. Schalten Sie „Spaltennamen mit Punkt verschachteln“ ein: Eine Spalte namens address.city wird zu <address><city>…</city></address>, und nummerierte Spalten wie phone.0 und phone.1 werden zu wiederholten <phone>-Elementen."
+        }
+      ]
+    },
+    "json-to-csv": {
+      "slug": "json-in-csv",
+      "name": "JSON in CSV",
+      "short": "Verschachtelte Daten in Spalten mit Punkt, bereit für Excel.",
+      "title": "JSON in CSV umwandeln – auch verschachtelt, ohne Upload | Klarto",
+      "description": "JSON oder JSON Lines im Browser in CSV umwandeln. Verschachtelte Objekte werden Spalten mit Punkt, Arrays nummerierte Spalten. Semikolon oder Komma, UTF-8-BOM.",
+      "h1": "JSON in CSV umwandeln",
+      "intro": "Wählen Sie eine JSON-Datei aus oder fügen Sie JSON ein. Sie erhalten eine CSV-Datei. Verschachtelte Objekte und Arrays werden nach einer festen Regel abgeflacht, die unten beschrieben ist.",
+      "steps": [
+        "Wählen Sie eine JSON- oder JSON-Lines-Datei aus, ziehen Sie sie auf das Feld oder fügen Sie JSON ein. Klicken Sie dann auf „Umwandeln“.",
+        "Prüfen Sie „Zeilen aus“: Ein Array auf oberster Ebene wird direkt verwendet, sonst das größte Array von Objekten. Wählen Sie bei Bedarf ein anderes.",
+        "Wählen Sie Trennzeichen und Dezimaltrennzeichen so, wie Ihr Tabellenkalkulationsprogramm sie erwartet. Voreingestellt sind Semikolon und Dezimalkomma, passend zu Excel mit deutschen Regionseinstellungen. Lassen Sie „UTF-8-BOM für Excel“ eingeschaltet, wenn Sie die Datei in Excel öffnen.",
+        "Laden Sie die .csv-Datei herunter oder kopieren Sie das Ergebnis."
+      ],
+      "faq": [
+        {
+          "q": "Wie werden verschachtelte Objekte und Arrays abgeflacht?",
+          "a": "Verschachtelte Objekte ergeben Spaltennamen mit Punkten, etwa customer.city. Arrays ergeben nummerierte Spalten, beginnend bei 0: tags.0, tags.1, und bei Arrays von Objekten items.0.sku, items.1.sku. Ein leeres Objekt oder Array ergibt eine leere Zelle. Die Spalten erscheinen in der Reihenfolge, in der sie zuerst vorkommen."
+        },
+        {
+          "q": "Welches Trennzeichen sollte ich für Excel wählen?",
+          "a": "Excel unter Windows öffnet CSV-Dateien mit dem Listentrennzeichen aus den Regionseinstellungen. In den USA und in Großbritannien ist das ein Komma; in Deutschland, Frankreich, Spanien und vielen anderen Ländern ist es ein Semikolon, mit Komma als Dezimaltrennzeichen. Wählen Sie Trennzeichen und Dezimaltrennzeichen passend dazu. Auf dieser Seite sind Semikolon und Dezimalkomma voreingestellt."
+        },
+        {
+          "q": "Warum sehen Umlaute oder Akzente in Excel falsch aus?",
+          "a": "Excel unter Windows öffnet eine CSV-Datei ohne Bytereihenfolge-Markierung (BOM) in der älteren Standardkodierung des Systems statt in UTF-8. Lassen Sie die Option „UTF-8-BOM für Excel“ eingeschaltet: Sie fügt am Anfang drei Bytes ein, die Excel mitteilen, dass die Datei UTF-8 ist."
+        },
+        {
+          "q": "Kann ich JSON Lines umwandeln?",
+          "a": "Ja. Eine Datei mit einem JSON-Wert pro Zeile (JSON Lines, NDJSON) wird als Liste gelesen, und jede Zeile wird zu einer Datenzeile."
+        },
+        {
+          "q": "Sind sehr große Zahlen sicher?",
+          "a": "Browser lesen JSON-Zahlen als 64-Bit-Gleitkommazahlen. Ganze Zahlen über 9.007.199.254.740.991 werden daher schon vor der Umwandlung gerundet. Das Tool warnt, wenn es eine solche Zahl findet. Speichern Sie solche IDs im JSON als Zeichenketten in Anführungszeichen."
+        }
+      ]
+    },
+    "csv-to-json": {
+      "slug": "csv-in-json",
+      "name": "CSV in JSON",
+      "short": "Trennzeichen automatisch, Felder in Anführungszeichen, europäisches CSV.",
+      "title": "CSV in JSON umwandeln – erkennt Trennzeichen, ohne Upload | Klarto",
+      "description": "CSV im Browser in JSON umwandeln: erkennt Komma, Semikolon oder Tabulator, verarbeitet Felder mit Zeilenumbrüchen und Zahlen mit Dezimalkomma. Kein Upload.",
+      "h1": "CSV in JSON umwandeln",
+      "intro": "Wählen Sie eine CSV-Datei aus oder fügen Sie CSV ein. Sie erhalten ein JSON-Array mit einem Objekt pro Zeile. Das Trennzeichen wird erkannt, und europäische Dateien mit Semikolon und Dezimalkomma funktionieren.",
+      "steps": [
+        "Wählen Sie eine CSV- oder TSV-Datei aus, ziehen Sie sie auf das Feld oder fügen Sie den Text ein. Klicken Sie dann auf „Umwandeln“.",
+        "Prüfen Sie das Trennzeichen und die Option für die Kopfzeile; die Hinweise unter dem Ergebnis zeigen, was erkannt wurde.",
+        "Entscheiden Sie, ob Zahlen und true/false zu JSON-Zahlen und booleschen Werten werden sollen und ob Spaltennamen mit Punkt verschachtelte Objekte ergeben sollen.",
+        "Laden Sie die .json-Datei herunter oder kopieren Sie das Ergebnis."
+      ],
+      "faq": [
+        {
+          "q": "Wie wird das Trennzeichen erkannt?",
+          "a": "Das Tool liest die ersten Zeilen und wählt unter Komma, Semikolon, Tabulator und senkrechtem Strich das Trennzeichen, das in den meisten Zeilen dieselbe Anzahl von Feldern (mehr als eines) ergibt. Sie können es auch selbst festlegen."
+        },
+        {
+          "q": "Welche Werte werden zu Zahlen?",
+          "a": "Ist „Zahlen und true/false umwandeln“ eingeschaltet, werden Werte wie 42, -3.5 oder 1e3 zu Zahlen und true und false zu booleschen Werten. Werte mit führenden Nullen (01067), einem führenden Pluszeichen, mehr als 15 Ziffern oder Tausendertrennzeichen (1.234,50) bleiben Zeichenketten. Bei „Automatisch“ ist das Dezimaltrennzeichen ein Komma, wenn das Trennzeichen ein Semikolon ist, sonst ein Punkt. Leere Felder werden zu \"\"."
+        },
+        {
+          "q": "Wie erhalte ich verschachteltes JSON?",
+          "a": "Schalten Sie „Spaltennamen mit Punkt verschachteln“ ein. Eine Spalte address.city wird zu {\"address\": {\"city\": …}}, und die Spalten tags.0 und tags.1 werden zu einem Array. Das ist die Umkehrung von „JSON in CSV“."
+        },
+        {
+          "q": "Meine Datei ist nicht in UTF-8. Was passiert?",
+          "a": "UTF-8 mit oder ohne Bytereihenfolge-Markierung (BOM) und UTF-16 mit BOM werden direkt gelesen. Eine Datei, die kein gültiges UTF-8 ist, wird als Windows-1252 gelesen, die übliche Kodierung älterer Excel-Exporte in Westeuropa. Ein Hinweis unter dem Ergebnis weist darauf hin."
+        },
+        {
+          "q": "Was passiert, wenn Zeilen mehr oder weniger Felder haben als die Kopfzeile?",
+          "a": "Fehlende Felder werden zu \"\", zusätzliche Felder erhalten Schlüssel namens column_N. Die erste solche Zeile wird mit ihrer Zeilennummer gemeldet."
+        }
+      ]
+    },
+    "json-to-excel": {
+      "slug": "json-in-excel",
+      "name": "JSON in Excel",
+      "short": "JSON-Typen bleiben erhalten, ISO-Datumswerte als Datumszellen.",
+      "title": "JSON in Excel umwandeln (XLSX) – ohne Upload | Klarto Convert",
+      "description": "JSON oder JSON Lines im Browser in eine Excel-Datei (.xlsx) umwandeln. Zahlen bleiben Zahlen, ISO-Datumswerte werden Datumszellen, verschachtelte Daten Spalten.",
+      "h1": "JSON in Excel umwandeln (XLSX)",
+      "intro": "Wählen Sie eine JSON-Datei aus oder fügen Sie JSON ein. Sie erhalten eine .xlsx-Datei mit Kopfzeile. JSON-Zahlen, boolesche Werte und Zeichenketten behalten in Excel ihren Typ.",
+      "steps": [
+        "Wählen Sie eine JSON- oder JSON-Lines-Datei aus, ziehen Sie sie auf das Feld oder fügen Sie JSON ein. Klicken Sie dann auf „Umwandeln“.",
+        "Prüfen Sie „Zeilen aus“, und wählen Sie ein anderes Array, falls das Tool das falsche gewählt hat.",
+        "Entscheiden Sie, ob ISO-Datumszeichenketten zu Excel-Datumswerten werden sollen.",
+        "Prüfen Sie die Vorschau und laden Sie die .xlsx-Datei herunter."
+      ],
+      "faq": [
+        {
+          "q": "Bleiben Zahlen in Excel Zahlen?",
+          "a": "Ja. JSON-Zahlen werden zu Zahlenzellen, true und false zu Wahrheitswerten und Zeichenketten zu Textzellen. So behält \"01067\" seine führende Null."
+        },
+        {
+          "q": "Wie werden Datumswerte behandelt?",
+          "a": "Ist „ISO-Datumswerte als Excel-Datum“ eingeschaltet, werden Zeichenketten wie 2026-11-20 oder 2026-11-20T14:30:00 zu Datumszellen. Zeichenketten mit Zeitzone, etwa 2026-11-20T14:30:00Z, bleiben Text, weil Excel-Zellen keine Zeitzone kennen."
+        },
+        {
+          "q": "Wie werden verschachtelte Objekte und Arrays angeordnet?",
+          "a": "Nach der Array-Regel: Verschachtelte Objekte ergeben Spaltennamen mit Punkten (customer.city), Arrays nummerierte Spalten (items.0.sku, items.1.sku). Jedes Array-Element erhält eigene Spalten, daher bleibt die Zahl der Zeilen gleich der Zahl der Datensätze."
+        },
+        {
+          "q": "Ist die Excel-Datei formatiert?",
+          "a": "Nur wenig: Die Kopfzeile erhält einen AutoFilter, und die Spaltenbreiten richten sich nach den ersten 200 Zeilen. Schriftarten, Farben und fixierte Bereiche werden nicht festgelegt."
+        }
+      ]
+    },
+    "excel-to-json": {
+      "slug": "excel-in-json",
+      "name": "Excel in JSON",
+      "short": "Zeilen als Objekte, Datumswerte in ISO 8601.",
+      "title": "Excel in JSON umwandeln – XLSX, XLS, ODS, ohne Upload | Klarto",
+      "description": "Ein Excel-Tabellenblatt im Browser in JSON umwandeln: ein Objekt pro Zeile, Zahlen als Zahlen, Datumswerte in ISO 8601. Liest .xlsx, .xls und .ods.",
+      "h1": "Excel in JSON umwandeln",
+      "intro": "Wählen Sie eine Arbeitsmappe aus, um eines ihrer Tabellenblätter in ein JSON-Array umzuwandeln: Die Kopfzeile liefert die Schlüssel, und jede Zeile darunter wird zu einem Objekt.",
+      "steps": [
+        "Wählen Sie eine .xlsx-, .xlsm-, .xlsb-, .xls- oder .ods-Datei aus, oder ziehen Sie sie auf das Feld.",
+        "Hat die Arbeitsmappe mehrere Tabellenblätter, wählen Sie eines in der Liste „Tabellenblatt“.",
+        "Schalten Sie „Erste Zeile ist Kopfzeile“ aus, um Arrays statt Objekte zu erhalten, oder schalten Sie „Spaltennamen mit Punkt verschachteln“ ein, um verschachteltes JSON zu erhalten.",
+        "Laden Sie die .json-Datei herunter oder kopieren Sie das Ergebnis."
+      ],
+      "faq": [
+        {
+          "q": "Wie sieht das JSON aus?",
+          "a": "Ein Array mit einem Objekt pro Zeile; die Schlüssel stammen aus der Kopfzeile. Zahlen bleiben Zahlen, Text bleibt Text, WAHR und FALSCH werden zu true und false, und leere Zellen werden zu null. Ohne Kopfzeile erhalten Sie ein Array von Arrays."
+        },
+        {
+          "q": "Wie werden Datumswerte umgewandelt?",
+          "a": "Als Datum formatierte Zellen werden zu ISO-8601-Zeichenketten wie \"2026-11-20\" oder \"2026-11-20T14:30:00\", Uhrzeiten zu \"14:30:00\". Eine Zeitzone wird nicht hinzugefügt. Arbeitsmappen mit dem 1904-Datumssystem, das in alten Mac-Dateien verbreitet ist, werden korrekt umgewandelt. Als Text eingegebene Datumswerte bleiben so, wie sie eingegeben wurden."
+        },
+        {
+          "q": "Warum sind manche Zahlen im JSON Zeichenketten?",
+          "a": "Weil die Zelle die Zahl als Text speichert (Excel markiert solche Zellen mit einem grünen Dreieck). Das JSON übernimmt sie als Zeichenkette, damit führende Nullen wie in 01067 nicht verloren gehen."
+        },
+        {
+          "q": "Was ist mit Formeln, verbundenen Zellen und leeren Überschriften?",
+          "a": "Bei Formeln wird der in der Datei gespeicherte Wert verwendet; nichts wird neu berechnet. Eine verbundene Zelle hat ihren Wert nur in der Zelle oben links. Leere Überschriftenzellen werden zu column_N, doppelte Überschriften erhalten _2, _3."
+        }
+      ]
+    },
+    "csv-to-excel": {
+      "slug": "csv-in-excel",
+      "name": "CSV in Excel",
+      "short": "Führende Nullen und lange Zahlen bleiben unverändert.",
+      "title": "CSV in Excel umwandeln (XLSX) – ohne Upload | Klarto Convert",
+      "description": "CSV im Browser in eine Excel-Datei (.xlsx) umwandeln. Führende Nullen und lange IDs bleiben erhalten, Semikolon und Dezimalkomma werden verarbeitet. Kein Upload.",
+      "h1": "CSV in Excel umwandeln (XLSX)",
+      "intro": "Wählen Sie eine CSV-Datei aus oder fügen Sie CSV ein. Sie erhalten eine .xlsx-Datei. Zahlen und ISO-Datumswerte werden zu echten Zellen, während Postleitzahlen, Telefonnummern und lange IDs genau so bleiben, wie sie geschrieben sind.",
+      "steps": [
+        "Wählen Sie eine CSV- oder TSV-Datei aus, ziehen Sie sie auf das Feld oder fügen Sie den Text ein. Klicken Sie dann auf „Umwandeln“.",
+        "Prüfen Sie Trennzeichen und Dezimaltrennzeichen; die Hinweise unter dem Ergebnis zeigen, was verwendet wurde.",
+        "Schalten Sie „Zahlen und Datumswerte erkennen“ aus, wenn alle Werte Text bleiben sollen.",
+        "Prüfen Sie die Vorschau und laden Sie die .xlsx-Datei herunter."
+      ],
+      "faq": [
+        {
+          "q": "Warum die CSV-Datei nicht einfach in Excel öffnen?",
+          "a": "Standardmäßig wendet Excel beim Öffnen einer CSV-Datei eigene Regeln an: Postleitzahlen wie 01067 verlieren ihre führende Null, Zahlen mit mehr als 15 Ziffern verlieren ihre letzten Ziffern, und das Trennzeichen muss zu den Regionseinstellungen passen. In der .xlsx-Datei aus diesem Tool sind die Zelltypen nach den Regeln auf dieser Seite festgelegt."
+        },
+        {
+          "q": "Welche Werte werden zu Zahlen und Datumswerten?",
+          "a": "Zahlen wie 24.90 oder, mit Dezimalkomma, 24,90 werden zu Zahlenzellen; ISO-Datumswerte wie 2026-11-20 werden zu Datumszellen. Werte mit führenden Nullen, einem führenden Pluszeichen, mehr als 15 Ziffern oder Tausendertrennzeichen bleiben Text, ebenso andere Datumsformate wie 20.11.2026."
+        },
+        {
+          "q": "Werden Umlaute und andere Zeichen richtig angezeigt?",
+          "a": "Ja. Eine .xlsx-Datei speichert Text als Unicode, daher zeigt Excel ihn richtig an. Die CSV-Datei wird als UTF-8 (mit oder ohne Bytereihenfolge-Markierung) oder als UTF-16 mit Bytereihenfolge-Markierung gelesen. Eine Datei, die kein gültiges UTF-8 ist, wird als Windows-1252 gelesen, und das Ergebnis weist darauf hin."
+        },
+        {
+          "q": "Wie groß darf die CSV-Datei sein?",
+          "a": "Wir haben eine 50 MB große CSV-Datei mit 611.452 Zeilen in 24 bis 28 Sekunden in eine 53 MB große .xlsx-Datei umgewandelt; dabei wurden etwa 2,7 GB Arbeitsspeicher belegt (Node.js auf einem Laptop mit 4 Kernen). Browser auf Smartphones haben deutlich weniger Arbeitsspeicher. Ein Excel-Tabellenblatt fasst höchstens 1.048.576 Zeilen."
+        }
+      ]
+    },
+    "xml-validator": {
+      "slug": "xml-validator",
+      "name": "XML-Validator",
+      "short": "Prüft die Wohlgeformtheit, zeigt Zeile und Spalte.",
+      "title": "XML-Validator – Wohlgeformtheit prüfen, mit Zeile und Spalte",
+      "description": "Im Browser prüfen, ob XML wohlgeformt ist. Der erste Fehler wird mit Zeile, Spalte und dem umgebenden Text angezeigt. Kein Upload.",
+      "h1": "XML-Validator: Wohlgeformtheit prüfen",
+      "intro": "Wählen Sie eine XML-Datei aus oder fügen Sie XML ein, um zu prüfen, ob es wohlgeformt ist. Wenn nicht, sehen Sie den ersten Fehler mit Zeile, Spalte und einer Markierung im Text.",
+      "steps": [
+        "Wählen Sie eine XML-Datei aus, ziehen Sie sie auf das Feld oder fügen Sie XML ein. Klicken Sie dann auf „Prüfen“.",
+        "Lesen Sie das Ergebnis: „Wohlgeformtes XML“ mit einer kurzen Zusammenfassung oder den ersten Fehler mit Zeile und Spalte.",
+        "Beheben Sie den Fehler an der markierten Stelle und prüfen Sie erneut, bis das Dokument wohlgeformt ist."
+      ],
+      "faq": [
+        {
+          "q": "Was genau wird geprüft?",
+          "a": "Die Wohlgeformtheit nach XML 1.0 und Namespaces in XML 1.0: ein Wurzelelement, korrekt verschachtelte und passende Tags, Attribute in Anführungszeichen und ohne Doppelungen, gültige Namen und Zeichen, definierte Entitäten und deklarierte Namensraum-Präfixe."
+        },
+        {
+          "q": "Wird gegen ein XSD-Schema oder eine DTD validiert?",
+          "a": "Nein. Ein wohlgeformtes Dokument kann trotzdem gegen sein Schema verstoßen. Der Validator liest eine DOCTYPE-Deklaration und ihre internen Entitätsdeklarationen, prüft das Dokument aber nicht gegen die DTD und lädt nie externe Dateien."
+        },
+        {
+          "q": "Welche Fehler sind am häufigsten?",
+          "a": "Ein nicht maskiertes & im Text (schreiben Sie &amp;), ein schließendes Tag, das nicht zum offenen Element passt, ein zweites Element nach dem Ende des Wurzelelements sowie Leerzeilen oder Leerzeichen vor der Deklaration <?xml …?>."
+        },
+        {
+          "q": "Wie werden Zeilen und Spalten gezählt?",
+          "a": "Zeilen und Spalten beginnen bei 1. CRLF, LF und CR beenden jeweils eine Zeile, und jedes Zeichen (Unicode-Codepunkt) zählt als eine Spalte. Angegeben wird die Stelle, an der das Problem erkannt wurde: Bei einem Element, das nie geschlossen wird, ist das das Ende der Datei, und die Meldung nennt die Zeile, in der das Element geöffnet wurde."
+        }
+      ]
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Klarto Convert – XML-, JSON-, CSV- und Excel-Konverter im Browser",
+      "description": "Kostenlose Konverter für XML, JSON, CSV und Excel, dazu ein XML-Validator. Alles läuft in Ihrem Browser; Ihre Dateien werden nicht hochgeladen.",
+      "h1": "XML-, JSON-, CSV- und Excel-Dateien im Browser umwandeln",
+      "intro": "Zehn kleine Tools für alltägliche Datendateien. Jedes läuft vollständig in Ihrem Browser, erklärt seine Umwandlungsregeln und zeigt genaue Fehlermeldungen.",
+      "toolsHeading": "Tools",
+      "whyHeading": "Was diese Tools anders machen",
+      "why": [
+        "Ihre Dateien werden nicht hochgeladen. Die Umwandlung läuft in Ihrem Browser: Die Seiten laden nur ihre eigenen Dateien von dieser Website und senden Ihre Daten nirgendwohin. Das können Sie im Tab „Netzwerk“ der Entwicklertools Ihres Browsers prüfen.",
+        "Die Regeln stehen auf jeder Seite: wie Attribute, Arrays, verschachtelte Objekte, Zahlen und Datumswerte umgewandelt werden. So wissen Sie, was Sie erwartet.",
+        "Fehlermeldungen nennen Zeile und Spalte und sagen, wie Sie das Problem beheben."
+      ],
+      "faq": [
+        {
+          "q": "Ist das kostenlos?",
+          "a": "Ja. Die Tools sind kostenlos und brauchen kein Konto."
+        },
+        {
+          "q": "Welche Browser funktionieren?",
+          "a": "Aktuelle Versionen von Browsern, die JavaScript-Module in Web Workers unterstützen. Wir testen die Seiten in Google Chrome."
+        },
+        {
+          "q": "Werden meine Dateien irgendwo gespeichert?",
+          "a": "Nein. Dateien werden in den Arbeitsspeicher Ihres Browser-Tabs gelesen und sind weg, sobald Sie die Seite schließen oder neu laden. Es gibt keine Cookies und keine Webanalyse."
+        }
+      ]
+    },
+    "privacy": {
+      "slug": "datenschutz",
+      "title": "Datenschutz – Klarto Convert",
+      "description": "Klarto Convert verarbeitet Dateien nur in Ihrem Browser. Keine Cookies, kein Tracking, keine Webanalyse. Was der Hosting-Anbieter protokolliert.",
+      "h1": "Datenschutz",
+      "sections": [
+        {
+          "h": "Ihre Dateien",
+          "p": [
+            "Dateien, die Sie auswählen, und Text, den Sie einfügen, werden nur in Ihrem Browser auf Ihrem Gerät verarbeitet. Sie werden nicht hochgeladen, nicht gespeichert und weder an uns noch an Dritte gesendet. Die einzigen Netzwerkanfragen der Seiten gelten den eigenen Dateien der Website (Seiten, Stylesheets und Skripte). Ihre Content Security Policy blockiert Anfragen, über die Skripte Daten senden könnten (connect-src 'none'), und das gilt auch für den Hintergrund-Worker, der die Umwandlung ausführt."
+          ]
+        },
+        {
+          "h": "Keine Cookies, kein Tracking",
+          "p": [
+            "Diese Website setzt keine Cookies, nutzt keinen lokalen Speicher (Local Storage) und enthält keinen Code für Webanalyse, Werbung oder soziale Medien. Alle Dateien der Website, auch die Bibliothek SheetJS, werden von dieser Website selbst ausgeliefert, nicht von Servern Dritter."
+          ]
+        },
+        {
+          "h": "Hosting",
+          "p": [
+            "Die Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc. Laut der Dokumentation von GitHub wird die IP-Adresse jedes Besuchers einer GitHub-Pages-Website aus Sicherheitsgründen protokolliert und gespeichert. Wir haben keinen Zugriff auf diese Protokolle. Einzelheiten stehen in der Datenschutzerklärung von GitHub."
+          ]
+        },
+        {
+          "h": "Wer diese Website betreibt",
+          "p": [
+            "Klarto Convert ist ein Projekt von {owner}, Bulgarien. Fragen zu dieser Website können Sie im Issue-Tracker des Quellcode-Repositorys stellen."
+          ]
+        }
+      ],
+      "githubLink": "GitHub General Privacy Statement (auf Englisch)"
+    },
+    "licenses": {
+      "slug": "lizenzen",
+      "title": "Lizenzen – Klarto Convert",
+      "description": "Lizenzen von Klarto Convert und der verwendeten Bibliotheken, darunter SheetJS Community Edition (Apache License 2.0).",
+      "h1": "Lizenzen",
+      "intro": "Klarto Convert verwendet eine Bibliothek eines Drittanbieters. Ihre Dateien werden unverändert von dieser Website ausgeliefert.",
+      "own": "Der Code von Klarto Convert selbst ist unter der MIT-Lizenz im Quellcode-Repository veröffentlicht.",
+      "libHeading": "SheetJS Community Edition",
+      "lib": "Liest und schreibt die Excel-Dateien. Version {version}, Apache License 2.0, © SheetJS LLC. Heruntergeladen von cdn.sheetjs.com; SHA-256 von xlsx.mjs: {sha}.",
+      "licenseLink": "Vollständiger Lizenztext (Apache License 2.0)"
+    },
+    "notFound": {
+      "title": "Seite nicht gefunden – Klarto Convert",
+      "h1": "Seite nicht gefunden",
+      "p": "Diese Seite gibt es nicht. Alle Tools sind auf der Startseite aufgeführt."
+    }
+  }
+}

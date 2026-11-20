@@ -1,0 +1,10 @@
+{
+  "name": "klarto-convert",
+  "private": true,
+  "type": "module",
+  "description": "Static, in-browser file converters (XML, JSON, CSV, Excel).",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/"
+  }
+}

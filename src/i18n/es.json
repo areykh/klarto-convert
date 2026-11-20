@@ -1,0 +1,749 @@
+{
+  "lang": "es",
+  "langName": "Español",
+  "locale": "es-ES",
+  "site": {
+    "name": "Klarto Convert",
+    "skip": "Ir al contenido",
+    "languageLabel": "Idioma",
+    "allTools": "Todas las herramientas",
+    "footerProject": "Klarto, un proyecto de {owner}",
+    "privacy": "Privacidad",
+    "licenses": "Licencias",
+    "source": "Código fuente",
+    "localNote": "Su archivo no sale de su dispositivo: la conversión se realiza en su navegador y no se sube nada."
+  },
+  "sections": {
+    "howTo": "Cómo se usa",
+    "rules": "Cómo funciona la conversión",
+    "faq": "Preguntas y respuestas",
+    "related": "Herramientas relacionadas"
+  },
+  "ui": {
+    "toolHeading": "Conversor",
+    "chooseFile": "Elegir un archivo",
+    "dropHint": "o arrástrelo aquí",
+    "pasteLabel": "O pegue el texto aquí",
+    "convert": "Convertir",
+    "sample": "Probar con un ejemplo",
+    "clear": "Borrar",
+    "options": "Opciones",
+    "cancel": "Cancelar",
+    "result": "Resultado",
+    "resultText": "Vista previa del resultado",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "copyFailed": "No se pudo copiar",
+    "download": "Descargar {name} ({size})",
+    "fileChosen": "{name} ({size})",
+    "bytes": "{n} bytes",
+    "kb": "{n} KB",
+    "mb": "{n} MB",
+    "working": "Procesando…",
+    "phase": {
+      "reading": "Leyendo el archivo…",
+      "parsing": "Leyendo los datos…",
+      "converting": "Convirtiendo…",
+      "writing": "Escribiendo el archivo de Excel…"
+    },
+    "elapsed": "{seconds} s",
+    "largeFile": "archivo grande, puede tardar un rato",
+    "largeExcel": "los archivos de Excel grandes necesitan mucha memoria y tiempo",
+    "done": "Listo en {seconds} s.",
+    "doneSize": "Listo en {seconds} s: {size}.",
+    "failed": "No se pudo completar la conversión.",
+    "cancelled": "Conversión cancelada.",
+    "lineCol": "Línea {line}, columna {col}",
+    "lineOnly": "Línea {line}",
+    "previewCut": "La vista previa muestra los primeros {n} caracteres. El archivo descargado lo contiene todo.",
+    "previewRows": "Vista previa de las primeras {rows} filas",
+    "timesMore": "(y {n} más)",
+    "auto": "Automático",
+    "topLevel": "nivel superior",
+    "rowsOption": "{path} ({count} elementos)",
+    "wholeDocument": "Todo el documento como una fila",
+    "sheetOption": "{name} ({rows} filas)",
+    "sheetHidden": "{name} ({rows} filas, oculta)",
+    "valid": "XML bien formado",
+    "invalid": "No está bien formado",
+    "validStats": "Elemento raíz <{root}>, {elements} elementos, profundidad de anidamiento {depth}.",
+    "validNoDtd": "Se leyó el DOCTYPE, pero el documento no se validó con la DTD.",
+    "delim": {
+      "comma": "coma",
+      "semicolon": "punto y coma",
+      "tab": "tabulador",
+      "pipe": "barra vertical |"
+    },
+    "opt": {
+      "consistent": "Elementos repetidos como arrays en todas partes",
+      "forceArrays": "Siempre como arrays (nombres de elementos)",
+      "indent": "Sangría",
+      "rootName": "Nombre del elemento raíz",
+      "itemName": "Nombre de los elementos de lista",
+      "declaration": "Incluir la declaración XML",
+      "rows": "Origen de las filas",
+      "detect": "Detectar números y fechas",
+      "sheet": "Hoja",
+      "header": "La primera fila es el encabezado",
+      "nested": "Anidar encabezados con puntos (a.b, a.0)",
+      "rowName": "Nombre del elemento de fila",
+      "delimiter": "Delimitador",
+      "decimal": "Separador decimal",
+      "bom": "BOM UTF-8 para Excel",
+      "types": "Convertir números y true/false",
+      "dates": "Fechas ISO como fechas de Excel"
+    },
+    "optValues": {
+      "indent": {
+        "2": "2 espacios",
+        "4": "4 espacios",
+        "0": "Ninguna (una sola línea)"
+      },
+      "delimiter": {
+        "auto": "Automático",
+        "comma": "Coma ,",
+        "semicolon": "Punto y coma ;",
+        "tab": "Tabulador",
+        "pipe": "Barra vertical |"
+      },
+      "decimal": {
+        "auto": "Automático",
+        ".": "Punto 1.5",
+        ",": "Coma 1,5"
+      }
+    },
+    "check": "Comprobar",
+    "unsupported": "No comprobado: el documento usa una característica que este validador no admite"
+  },
+  "errors": {
+    "input.empty": "La entrada está vacía. Elija un archivo o pegue un texto.",
+    "input.readFailed": "El navegador no pudo leer el archivo {name}.",
+    "decode.unknownEncoding": "La declaración XML indica la codificación «{encoding}», que este navegador no puede leer. Guarde el archivo como UTF-8.",
+    "decode.utf16NoBom": "El archivo declara {encoding}, pero no tiene marca de orden de bytes (BOM). Guárdelo como UTF-8, o como UTF-16 con marca de orden de bytes.",
+    "decode.invalidUtf8Xml": "El archivo no es UTF-8 válido en este punto. Guárdelo como UTF-8 o indique su codificación real en la declaración XML, por ejemplo <?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>.",
+    "decode.invalidUtf8": "El archivo no es UTF-8 válido en este punto. Guárdelo como UTF-8 y vuelva a intentarlo.",
+    "xml.invalidChar": "El carácter {code} no está permitido en XML 1.0.",
+    "xml.badXmlDecl": "La declaración XML está mal formada. Debería tener este aspecto: <?xml version=\"1.0\" encoding=\"UTF-8\"?>.",
+    "xml.misplacedXmlDecl": "La declaración XML <?xml …?> debe ser lo primero del archivo. Elimine las líneas en blanco, los espacios u otro contenido que haya delante.",
+    "xml.unclosedComment": "Este comentario no se cierra nunca con -->.",
+    "xml.doubleHyphen": "No se permiten dos guiones seguidos (--) dentro de un comentario.",
+    "xml.cdataOutsideRoot": "Una sección CDATA solo se permite dentro del elemento raíz.",
+    "xml.unclosedCdata": "Esta sección CDATA no se cierra nunca con ]]>.",
+    "xml.badMarkup": "Marcado desconocido después de «<!». Se esperaba un comentario <!-- -->, una sección CDATA <![CDATA[ ]]> o <!DOCTYPE>.",
+    "xml.badPI": "Instrucción de procesamiento mal formada. Debería tener este aspecto: <?name data?>.",
+    "xml.unclosedPI": "Esta instrucción de procesamiento no se cierra nunca con ?>.",
+    "xml.badDoctype": "La declaración DOCTYPE está mal formada.",
+    "xml.misplacedDoctype": "La declaración DOCTYPE debe aparecer una sola vez, antes del elemento raíz.",
+    "xml.unexpectedEof": "El archivo termina en mitad de una etiqueta.",
+    "xml.badTagStart": "Después de «<» debe ir un nombre de etiqueta, pero aparece «{char}». Para escribir el signo menor que en un texto, use &lt;.",
+    "xml.multipleRoots": "Aquí empieza un segundo elemento raíz, <{name}>. Un documento XML tiene exactamente un elemento raíz (aquí, <{root}>); envuelva ambos en un elemento común.",
+    "xml.expectedTagEnd": "Se esperaba «>» para cerrar la etiqueta {name}.",
+    "xml.badAttrName": "Carácter no válido «{char}» en la etiqueta <{name}>. Los nombres de atributo empiezan por una letra o un guion bajo.",
+    "xml.missingSpace": "Los atributos de <{name}> deben ir separados por un espacio.",
+    "xml.attrNoValue": "El atributo «{name}» no tiene valor. En XML, cada atributo necesita un valor entre comillas, por ejemplo {name}=\"…\".",
+    "xml.attrNotQuoted": "El valor del atributo «{name}» debe ir entre comillas dobles o simples.",
+    "xml.unclosedAttr": "Al valor del atributo «{name}» le falta la comilla de cierre.",
+    "xml.ltInAttr": "No se permite «<» en el valor del atributo «{name}». Escriba &lt; en su lugar.",
+    "xml.duplicateAttr": "El atributo «{name}» aparece dos veces en el mismo elemento.",
+    "xml.reservedPrefix": "«{name}» hace un uso indebido de un nombre reservado: los prefijos xml y xmlns tienen un uso fijo según la norma de espacios de nombres de XML.",
+    "xml.emptyNsUri": "La declaración de espacio de nombres {name}=\"\" está vacía. Un prefijo debe estar vinculado a un URI no vacío.",
+    "xml.badQName": "«{name}» no es un nombre válido con espacios de nombres: use como máximo un signo de dos puntos (:), y nunca al principio ni al final.",
+    "xml.undeclaredPrefix": "El prefijo de espacio de nombres «{prefix}» de «{name}» no está declarado. Declare xmlns:{prefix}=\"…\" en este elemento o en uno de sus elementos padre.",
+    "xml.badEndTag": "Etiqueta de cierre mal formada. Debería tener este aspecto: </name>.",
+    "xml.unexpectedEndTag": "La etiqueta de cierre </{name}> no tiene una etiqueta de apertura correspondiente.",
+    "xml.mismatchedTag": "La etiqueta de cierre </{found}> no corresponde al elemento abierto <{expected}> (abierto en la línea {openLine}, columna {openCol}).",
+    "xml.textBeforeRoot": "Hay texto antes del elemento raíz. Un documento XML debe empezar por «<».",
+    "xml.textAfterRoot": "Hay texto después del final del elemento raíz. Todo el contenido debe estar dentro del elemento raíz.",
+    "xml.cdataEndInText": "La secuencia ]]> no está permitida en el texto. Escriba ]]&gt; en su lugar.",
+    "xml.bareAmpersand": "«&» sin escapar. Escriba &amp; para el signo & en el texto y en los valores de atributo.",
+    "xml.badCharRef": "La referencia de carácter {ref} representa un carácter que XML 1.0 no permite.",
+    "xml.undefinedEntity": "La entidad &{name}; no está definida. Sin un DOCTYPE que la defina, XML solo conoce &lt; &gt; &amp; &apos; y &quot;. Para un espacio de no separación, escriba &#160;.",
+    "xml.externalEntity": "La entidad &{name}; hace referencia a un archivo externo. Las entidades externas nunca se cargan.",
+    "xml.entityLoop": "La entidad &{name}; hace referencia a sí misma.",
+    "xml.entityMarkup": "La entidad &{name}; contiene marcado. Solo se admiten entidades de texto simple.",
+    "xml.entityExpansionLimit": "La expansión de entidades se detuvo en la entidad &{name};: al expandirse, el documento supera un millón de caracteres o 100.000 referencias a entidades. Esto protege contra los archivos de tipo «billion laughs».",
+    "xml.unclosedTag": "El elemento <{name}> (abierto en la línea {openLine}, columna {openCol}) no se cierra nunca.",
+    "xml.noRoot": "No se encontró ningún elemento raíz: la entrada no contiene ningún elemento XML.",
+    "json.comment": "JSON no admite comentarios.",
+    "json.unterminatedString": "A esta cadena le falta la comilla doble de cierre.",
+    "json.badEscape": "Secuencia de escape no válida: {esc}. Se permiten \\\" \\\\ \\/ \\b \\f \\n \\r \\t y \\u seguida de cuatro dígitos hexadecimales.",
+    "json.newlineInString": "Salto de línea dentro de una cadena. Escríbalo como \\n o cierre la cadena con una comilla doble.",
+    "json.controlChar": "El carácter de control {code} debe escaparse dentro de una cadena, por ejemplo \\t para un tabulador.",
+    "json.badNumber": "«{token}» no es un número JSON válido. Los números JSON no llevan ceros a la izquierda, ni signo más, ni un punto al principio o al final (escriba 0.5, no .5).",
+    "json.singleQuote": "JSON exige comillas dobles alrededor de las cadenas y las claves; no se permiten comillas simples.",
+    "json.badLiteral": "«{token}» no es un valor JSON. Use true, false, null, un número o un texto entre comillas dobles.",
+    "json.unexpectedChar": "Carácter inesperado: «{char}».",
+    "json.unexpectedEnd": "El JSON termina antes de tiempo: falta un valor, un corchete de cierre o una llave de cierre.",
+    "json.trailingComma": "Hay una coma antes de un corchete o una llave de cierre. Elimine la última coma.",
+    "json.keyNotString": "Las claves de un objeto deben ser texto entre comillas dobles, pero se encontró «{char}».",
+    "json.missingColon": "Se esperaba «:» después de la clave, pero se encontró «{char}».",
+    "json.missingComma": "Se esperaba «,» o «{close}», pero se encontró «{char}». Probablemente falta una coma.",
+    "json.extraData": "Hay más datos después del final del valor JSON. Un archivo JSON contiene un solo valor. Para un valor por línea (JSON Lines), use JSON a CSV o JSON a Excel.",
+    "json.invalid": "No se pudo leer el JSON: {detail}",
+    "json.invalidXmlChar": "El valor de {path} contiene el carácter {code}, que XML 1.0 no admite.",
+    "csv.unclosedQuote": "Aquí empieza un campo entre comillas, pero falta su comilla doble de cierre.",
+    "excel.notWorkbook": "Este archivo no es un libro de hoja de cálculo (.xlsx, .xlsm, .xlsb, .xls u .ods). Para archivos CSV, use las herramientas de CSV.",
+    "excel.encrypted": "Este libro está protegido con contraseña. Ábralo en Excel, quite la contraseña y vuelva a guardarlo.",
+    "excel.unreadable": "No se pudo leer el libro; puede estar dañado. Detalles: {detail}",
+    "excel.noSheets": "El libro no contiene ninguna hoja.",
+    "excel.noSuchSheet": "No se encontró la hoja «{name}».",
+    "excel.tooManyRows": "{rows} filas no caben en una hoja de Excel (máximo: {max} filas).",
+    "excel.tooManyCols": "{cols} columnas no caben en una hoja de Excel (máximo: {max} columnas).",
+    "general.noData": "No hay datos que escribir.",
+    "general.tooDeep": "Los datos tienen demasiados niveles de anidamiento para convertirlos.",
+    "general.tooLarge": "El archivo es demasiado grande para la memoria que puede usar esta pestaña del navegador. Pruebe con un archivo más pequeño o divídalo.",
+    "general.crashed": "El navegador detuvo la conversión, probablemente porque la pestaña se quedó sin memoria. Pruebe con un archivo más pequeño, o cierre otras pestañas y vuelva a intentarlo.",
+    "general.unexpected": "Error inesperado: {detail}"
+  },
+  "warnings": {
+    "json.renamedKey": "Algunas claves no son nombres XML válidos y se renombraron; por ejemplo, «{from}» pasó a ser {to}.",
+    "json.attrNotPrimitive": "El atributo {path} contiene un objeto o un array; se escribió como texto JSON.",
+    "json.undeclaredPrefix": "El prefijo «{prefix}» (en {name}) se usa sin una declaración xmlns:{prefix}, por lo que el XML no está bien formado respecto a los espacios de nombres.",
+    "json.unsafeInteger": "Se encontró un número entero mayor que 9.007.199.254.740.991. Los navegadores redondean estos números al leer JSON; escriba los identificadores largos como cadenas entre comillas.",
+    "json.wrappedInRoot": "El JSON no tiene exactamente una clave de nivel superior, por lo que el resultado se envuelve en <{root}>.",
+    "csv.textAfterQuote": "Línea {line}: hay texto después de la comilla de cierre; se conservó como parte del campo.",
+    "csv.fieldCount": "La línea {line} tiene {found} campos y el encabezado, {expected}. Los campos que faltan quedan vacíos; los campos sobrantes reciben columnas llamadas column_N.",
+    "csv.fieldCountRows": "En total, {rows} filas tienen un número de campos distinto del encabezado.",
+    "excel.cellTruncated": "La celda {cell} tiene {length} caracteres, pero Excel admite {max}. El texto se recortó.",
+    "xml.unexpandedEntity": "La entidad &{name}; está definida en una DTD o en un archivo externo que no se lee, así que se conservó tal como está escrita.",
+    "json.emptyNsUri": "La declaración de espacio de nombres xmlns:{prefix}=\"\" está vacía, algo que los espacios de nombres de XML no permiten; se omitió.",
+    "flatten.headerClash": "Dos valores corresponden a la columna {header} (una clave que contiene un punto y una clave anidada); se conservó el primer valor."
+  },
+  "info": {
+    "info.elements": "{count} elementos, elemento raíz <{root}>.",
+    "info.rowsFrom": "Filas tomadas de {path}: {count}.",
+    "info.wholeDocument": "Todo el documento es una fila.",
+    "info.columns": "{count} columnas.",
+    "info.jsonLines": "Leído como JSON Lines: {count} valores, uno por línea.",
+    "info.delimiter": "Delimitador: {name}.",
+    "info.records": "{count} filas de datos.",
+    "info.decimal": "Separador decimal de los números: «{sep}».",
+    "info.sheet": "Hoja «{name}»: {rows} filas.",
+    "info.encoding": "Leído como {encoding}.",
+    "decode.readAs1252": "El archivo no es UTF-8 válido, así que se leyó como Windows-1252, la codificación habitual de las exportaciones de versiones antiguas de Excel en Europa occidental. Si ve caracteres incorrectos, guarde el archivo como UTF-8."
+  },
+  "rules": {
+    "xmlJson": {
+      "title": "Correspondencia entre XML y JSON",
+      "items": [
+        "Cada elemento se convierte en una clave con el nombre del elemento. Los prefijos de espacio de nombres forman parte del nombre: `soap:Body`.",
+        "Los atributos se convierten en claves con una «@» delante: `id=\"7\"` se convierte en `\"@id\": \"7\"`. Las declaraciones de espacio de nombres se conservan de la misma forma, como `\"@xmlns:soap\"`.",
+        "Un elemento que solo contiene texto se convierte en ese texto. Si además tiene atributos o elementos hijos, su texto va en `\"#text\"`: `<price currency=\"EUR\">12.50</price>` se convierte en `{\"price\": {\"@currency\": \"EUR\", \"#text\": \"12.50\"}}`.",
+        "Los elementos que se repiten bajo el mismo padre se convierten en un array, en el orden del documento. Los nombres intercalados se agrupan, así que no se conserva el orden entre elementos de nombres distintos.",
+        "Las secciones CDATA se convierten en texto normal. Los comentarios, las instrucciones de procesamiento y el DOCTYPE se descartan. Las entidades definidas solo en una DTD externa, como `&nbsp;` en XHTML, se conservan tal como están escritas, con una nota.",
+        "Un elemento vacío como `<note/>` se convierte en `\"\"`. Los espacios en blanco entre elementos se descartan, y se quitan los espacios al principio y al final del texto, salvo dentro de `xml:space=\"preserve\"`.",
+        "Todos los valores siguen siendo cadenas, porque XML no tiene tipos de datos: `\"00123\"` conserva sus ceros a la izquierda."
+      ]
+    },
+    "jsonToXml": {
+      "title": "De JSON a XML",
+      "items": [
+        "Un objeto con exactamente una clave (cuyo valor no es un array) da el elemento raíz. Cualquier otro contenido se envuelve en el elemento raíz indicado en las opciones.",
+        "Las claves que empiezan por «@» se convierten en atributos, y `\"#text\"`, en el texto del elemento.",
+        "Un array se convierte en elementos repetidos con el nombre de la clave. Los arrays dentro de arrays se envuelven, y sus valores reciben el nombre indicado en la opción «Nombre de los elementos de lista».",
+        "`null` y `\"\"` se convierten en un elemento vacío, por ejemplo `<note/>`. Un array vacío no produce ningún elemento.",
+        "Las claves que no son nombres XML válidos se ajustan: los caracteres no válidos se sustituyen por «_», y un nombre que empieza por un dígito recibe un «_» delante."
+      ]
+    },
+    "flatten": {
+      "title": "La regla de los arrays: datos anidados en columnas",
+      "items": [
+        "Los objetos anidados reciben nombres de columna con puntos: `customer.name`, `customer.address.city`.",
+        "Los arrays reciben columnas numeradas a partir de 0: `tags.0`, `tags.1`. Los arrays de objetos combinan ambas cosas: `items.0.sku`, `items.0.qty`, `items.1.sku`.",
+        "Un objeto o un array vacío da una celda vacía bajo su propio nombre de columna.",
+        "Las columnas aparecen en el orden en que se encuentran por primera vez. Si una fila no tiene un valor, esa celda queda vacía.",
+        "Las filas salen de un array de nivel superior, si lo hay. Si no, se usa el array de objetos más grande, por ejemplo `orders`; puede elegir otro en «Origen de las filas». Sin un array así, todo el documento es una fila."
+      ]
+    },
+    "unflatten": {
+      "title": "De encabezados con puntos a datos anidados",
+      "items": [
+        "Con «Anidar encabezados con puntos» activado, una columna `address.city` se convierte en `{\"address\": {\"city\": …}}`.",
+        "Las partes numeradas se convierten en arrays cuando van 0, 1, 2… sin huecos: `tags.0` y `tags.1` se convierten en `\"tags\": [\"a\", \"b\"]`.",
+        "Esto invierte la regla de los arrays de JSON a CSV y JSON a Excel. Si existen a la vez una columna `a` y una columna `a.b`, `a.b` conserva su nombre sin anidar."
+      ]
+    },
+    "csvRead": {
+      "title": "Cómo se lee el CSV",
+      "items": [
+        "Delimitador: coma, punto y coma, tabulador o barra vertical; se detecta en las primeras filas o lo elige usted.",
+        "Los campos entre comillas dobles pueden contener el delimitador, saltos de línea y comillas escritas como dos comillas (`\"\"`), como en la RFC 4180. Funcionan los finales de línea CRLF, LF y CR. Las líneas completamente vacías se omiten.",
+        "Codificación: UTF-8 con o sin marca de orden de bytes, y UTF-16 con marca de orden de bytes. Un archivo que no es UTF-8 válido se lee como Windows-1252, y el resultado lo indica.",
+        "Números: con el separador decimal en «Automático», se usa la coma cuando el delimitador es el punto y coma (el CSV europeo habitual) y, si no, el punto. Los valores con ceros a la izquierda (`01067`), con un signo más inicial (números de teléfono) o con más de 15 dígitos siguen siendo texto. No se reconocen los separadores de miles, porque `1.234` puede significar 1234 o 1,234: esos valores siguen siendo texto, salvo que su punto o su coma sea el separador decimal."
+      ]
+    },
+    "csvWrite": {
+      "title": "Cómo se escribe el CSV",
+      "items": [
+        "Los campos que contienen el delimitador, una comilla doble o un salto de línea se ponen entre comillas dobles; las comillas interiores se duplican. Las filas terminan con CRLF.",
+        "Con la coma decimal, los números JSON se escriben como `1,5`. Los valores de texto nunca se modifican.",
+        "La marca de orden de bytes UTF-8 (tres bytes al inicio) hace que Excel abra el archivo como UTF-8, de modo que caracteres como ñ, ü, é o ж se muestran correctamente."
+      ]
+    },
+    "excelRead": {
+      "title": "Cómo se lee el libro",
+      "items": [
+        "Formatos: .xlsx, .xlsm, .xlsb, .xls (Excel 97–2003) y .ods (LibreOffice, OpenOffice). Una hoja por conversión; elíjala después de cargar el archivo.",
+        "Las celdas numéricas siguen siendo números y las de texto, texto: un código postal guardado como texto, como `01067`, conserva su cero inicial. VERDADERO y FALSO (TRUE y FALSE) pasan a ser booleanos; las celdas de error dan su código, como `#DIV/0!`, y las celdas vacías, `null` (en XML, un elemento vacío).",
+        "Las celdas con formato de fecha se convierten en texto ISO 8601: `2026-11-20`, `2026-11-20T14:30:00` o `14:30:00` para una hora; no se incluye zona horaria. Se admiten los libros con el sistema de fechas 1904.",
+        "En las fórmulas se usa el resultado guardado en el archivo; no se recalcula nada. Una celda combinada solo tiene su valor en la celda superior izquierda.",
+        "Las celdas de encabezado vacías reciben el nombre `column_N`, y los duplicados, `_2`, `_3`."
+      ]
+    },
+    "excelToXml": {
+      "title": "De la hoja a XML",
+      "items": [
+        "Cada fila bajo el encabezado se convierte en un elemento (predeterminado: `<row>`) dentro del elemento raíz (predeterminado: `<rows>`); cada columna se convierte en un elemento hijo con el nombre de su encabezado.",
+        "Los nombres de encabezado que no son nombres XML válidos se ajustan: los espacios y otros caracteres no válidos se sustituyen por «_». Un encabezado que empieza por «@» se convierte en atributo.",
+        "Con «Anidar encabezados con puntos» activado, `address.city` se convierte en `<address><city>…</city></address>`."
+      ]
+    },
+    "excelWrite": {
+      "title": "Cómo se crea el archivo de Excel",
+      "items": [
+        "Con «Detectar números y fechas» activado, valores como `24.90` se convierten en números, y fechas ISO como `2026-11-20` o `2026-11-20 14:30`, en celdas de fecha. Otros formatos de fecha, como `20.11.2026`, siguen siendo texto.",
+        "Los valores con ceros a la izquierda, con un signo más inicial o con más de 15 dígitos siguen siendo texto, porque Excel eliminaría los ceros o redondearía los dígitos.",
+        "La primera fila es el encabezado: recibe un Autofiltro, y el ancho de las columnas se calcula a partir de las primeras 200 filas. No se aplica ningún otro formato.",
+        "Una hoja admite como máximo 1.048.576 filas y 16.384 columnas, y una celda, como máximo 32.767 caracteres. Los datos que superan estos límites se rechazan, y el texto más largo se recorta con un aviso."
+      ]
+    },
+    "excelWriteJson": {
+      "title": "Cómo se crea el archivo de Excel",
+      "items": [
+        "Se conservan los tipos de JSON: los números pasan a ser celdas numéricas; true y false, celdas booleanas, y las cadenas, celdas de texto, de modo que `\"01067\"` sigue siendo texto.",
+        "Con «Fechas ISO como fechas de Excel» activado, cadenas como `2026-11-20` o `2026-11-20T14:30:00` se convierten en celdas de fecha. Las cadenas con zona horaria (`Z` o `+02:00`) siguen siendo texto, porque las celdas de Excel no tienen zona horaria.",
+        "La primera fila es el encabezado: recibe un Autofiltro, y el ancho de las columnas se calcula a partir de las primeras 200 filas.",
+        "Una hoja admite como máximo 1.048.576 filas y 16.384 columnas, y una celda, como máximo 32.767 caracteres. Los datos que superan estos límites se rechazan, y el texto más largo se recorta con un aviso."
+      ]
+    },
+    "validator": {
+      "title": "Qué se comprueba",
+      "items": [
+        "Que el documento esté bien formado según XML 1.0 y Namespaces in XML 1.0: un único elemento raíz, etiquetas que coinciden y están bien anidadas, atributos entre comillas y sin repetir, nombres y caracteres válidos, entidades definidas y prefijos de espacio de nombres declarados.",
+        "La comprobación se detiene en el primer error y muestra su línea y su columna junto con el texto que lo rodea.",
+        "El documento no se valida con una DTD ni con un esquema XML (XSD). Nunca se cargan archivos externos; las entidades definidas solo en ellos, como `&nbsp;` en XHTML, se indican en una nota."
+      ]
+    }
+  },
+  "tools": {
+    "xml-to-json": {
+      "slug": "xml-a-json",
+      "name": "XML a JSON",
+      "short": "Incluye atributos, espacios de nombres y CDATA.",
+      "title": "Convertir XML a JSON – gratis, sin subir archivos | Klarto",
+      "description": "Convierta XML a JSON en su navegador. Los atributos pasan a ser claves @; los elementos repetidos, arrays, y CDATA, texto. Su archivo no se sube.",
+      "h1": "Convertir XML a JSON",
+      "intro": "Elija un archivo XML o pegue XML para obtener JSON con una correspondencia documentada y reversible. Los errores del XML se muestran con su línea y su columna.",
+      "steps": [
+        "Elija un archivo XML, arrástrelo al recuadro o pegue el XML en el campo de texto y pulse Convertir.",
+        "Revise las opciones: si los elementos repetidos son arrays en todas partes, qué elementos deben ser siempre arrays y la sangría.",
+        "Mire la vista previa y descargue el archivo .json o copie el resultado.",
+        "Si el XML tiene un error, el mensaje indica la línea y la columna. Corríjalo y vuelva a convertir."
+      ],
+      "faq": [
+        {
+          "q": "¿Cómo se guardan los atributos y el texto en el JSON?",
+          "a": "Cada atributo se convierte en una clave con «@» delante de su nombre, así que id=\"7\" se convierte en \"@id\": \"7\". Un elemento que solo contiene texto se convierte en ese texto. Si el elemento también tiene atributos o elementos hijos, el texto se guarda en \"#text\"."
+        },
+        {
+          "q": "¿Por qué todos los números van entre comillas?",
+          "a": "XML no tiene tipos de datos, así que cada valor se convierte como cadena. Convertir \"00123\" o \"1e5\" en números cambiaría los datos. Convierta los tipos en su propio código, donde sabe qué campos son números."
+        },
+        {
+          "q": "¿Cuándo se convierte un elemento en array?",
+          "a": "Cuando aparece más de una vez bajo el mismo padre. Con «Elementos repetidos como arrays en todas partes» activado (la opción predeterminada), un elemento que se repite en cualquier punto se convierte en array en la misma ruta de todos los registros, de modo que todos los registros tienen la misma forma. Para elementos que nunca se repiten en este archivo, escriba sus nombres en «Siempre como arrays»."
+        },
+        {
+          "q": "¿Qué pasa con los espacios de nombres, los comentarios y CDATA?",
+          "a": "Los prefijos se mantienen en los nombres, como \"soap:Body\", y las declaraciones de espacio de nombres se conservan como claves \"@xmlns\", de modo que JSON a XML devuelve los mismos espacios de nombres. Las secciones CDATA se convierten en texto normal. Los comentarios y las instrucciones de procesamiento se descartan."
+        }
+      ]
+    },
+    "json-to-xml": {
+      "slug": "json-a-xml",
+      "name": "JSON a XML",
+      "short": "Las claves @ pasan a atributos; los arrays, a elementos repetidos.",
+      "title": "Convertir JSON a XML – gratis, sin subir archivos | Klarto",
+      "description": "Convierta JSON a XML bien formado en su navegador: las claves @ pasan a ser atributos; #text, texto, y los arrays, elementos repetidos. Sin subir archivos.",
+      "h1": "Convertir JSON a XML",
+      "intro": "Elija un archivo JSON o pegue JSON para obtener XML bien formado y con sangría. La correspondencia es la misma que en la herramienta XML a JSON, así que puede convertir en ambos sentidos.",
+      "steps": [
+        "Elija un archivo JSON, arrástrelo al recuadro o pegue el JSON y pulse Convertir.",
+        "Indique el nombre del elemento raíz, el nombre de los elementos de las listas anidadas, la sangría y si se incluye la declaración XML.",
+        "Lea las notas bajo el resultado: indican las claves renombradas y otros cambios.",
+        "Descargue el archivo .xml o copie el resultado."
+      ],
+      "faq": [
+        {
+          "q": "¿Qué elemento pasa a ser la raíz?",
+          "a": "Si el JSON es un objeto con exactamente una clave cuyo valor no es un array, esa clave pasa a ser el elemento raíz. Si no, el contenido se envuelve en un elemento raíz con el nombre indicado en las opciones, «root» de forma predeterminada."
+        },
+        {
+          "q": "¿Cómo creo atributos?",
+          "a": "Empiece la clave con «@» y use \"#text\" para el texto del elemento: {\"price\": {\"@currency\": \"EUR\", \"#text\": \"9.90\"}} da <price currency=\"EUR\">9.90</price>."
+        },
+        {
+          "q": "¿Qué pasa con los arrays, null y las cadenas vacías?",
+          "a": "Un array se convierte en un elemento por cada valor, cada uno con el nombre de la clave. Los arrays dentro de arrays se envuelven en un elemento cuyos valores se llaman «item» (puede cambiar el nombre). null y \"\" se convierten en un elemento vacío como <note/>. Un array vacío no produce ningún elemento."
+        },
+        {
+          "q": "¿Y si una clave no es un nombre XML válido?",
+          "a": "Los caracteres que no pueden aparecer en un nombre XML se sustituyen por «_», y un nombre que empieza por un dígito recibe un «_» delante: «first name» pasa a ser first_name, y «1st», _1st. Las notas bajo el resultado indican las claves renombradas."
+        },
+        {
+          "q": "¿Qué caracteres se escapan?",
+          "a": "&, < y > en el texto, y &, <, \" además de tabuladores y saltos de línea en los valores de atributo. Los caracteres de control que XML 1.0 no permite, como U+0001, detienen la conversión, y el mensaje indica la ruta del valor."
+        }
+      ]
+    },
+    "xml-to-excel": {
+      "slug": "xml-a-excel",
+      "name": "XML a Excel",
+      "short": "Una fila por registro; números y fechas como celdas reales.",
+      "title": "Convertir XML a Excel (XLSX) – sin subir archivos | Klarto",
+      "description": "Convierta XML en un archivo .xlsx de Excel en su navegador. Una fila por registro, atributos y elementos anidados como columnas, números y fechas como celdas reales.",
+      "h1": "Convertir XML a Excel (XLSX)",
+      "intro": "Elija un archivo XML o pegue XML para obtener un archivo .xlsx con una fila por registro. Los elementos anidados y los atributos se convierten en columnas con nombres con puntos.",
+      "steps": [
+        "Elija un archivo XML, arrástrelo al recuadro o pegue el XML y pulse Convertir.",
+        "Revise «Origen de las filas»: la herramienta elige la lista más grande de elementos repetidos, por ejemplo todos los <order>. Elija otra lista si es necesario.",
+        "Revise la vista previa de las primeras filas.",
+        "Descargue el archivo .xlsx y ábralo en Excel o en otro programa de hojas de cálculo."
+      ],
+      "faq": [
+        {
+          "q": "¿Qué elementos se convierten en filas?",
+          "a": "La lista más grande de elementos repetidos que contienen datos propios, por ejemplo cada <order> dentro de <orders>. Después de la primera conversión, puede elegir otra lista, o todo el documento como una sola fila, en «Origen de las filas»."
+        },
+        {
+          "q": "¿Cómo se convierten en columnas los elementos anidados y los atributos?",
+          "a": "Los nombres de columna siguen la ruta con puntos: customer.name, item.0.@sku, item.1.@sku. Los atributos empiezan por «@»; el texto de un elemento que también tiene atributos va en una columna que termina en #text. Un elemento que se repite dentro de un registro recibe columnas numeradas en todos los registros."
+        },
+        {
+          "q": "¿Los números y las fechas son valores reales de Excel?",
+          "a": "Con «Detectar números y fechas» activado, 24.90 se convierte en un número, y 2026-11-20, en una celda de fecha. Los valores con ceros a la izquierda, como 01067, con un signo más inicial o con más de 15 dígitos siguen siendo texto, así que no se modifican."
+        },
+        {
+          "q": "¿Qué tamaño puede tener el archivo XML?",
+          "a": "Probamos un archivo XML de 20 MB con 102.973 registros: dio un archivo .xlsx de 12 MB en un tiempo de 5,5 a 7,5 segundos (Node.js en un equipo portátil de 4 núcleos). Los archivos grandes necesitan mucha más memoria que su tamaño. Una hoja de Excel admite como máximo 1.048.576 filas y 16.384 columnas."
+        }
+      ]
+    },
+    "excel-to-xml": {
+      "slug": "excel-a-xml",
+      "name": "Excel a XML",
+      "short": "Cualquier hoja a XML, con los encabezados como nombres de elemento.",
+      "title": "Convertir Excel a XML – XLSX, XLS, ODS, sin subir archivos",
+      "description": "Convierta una hoja de Excel (.xlsx, .xls, .ods) a XML en su navegador. Cada fila pasa a ser un elemento, y cada encabezado, un elemento hijo. Sin subir archivos.",
+      "h1": "Convertir Excel a XML",
+      "intro": "Elija un libro para convertir una de sus hojas en XML: un elemento por fila, un elemento hijo por columna y las fechas en ISO 8601.",
+      "steps": [
+        "Elija un archivo .xlsx, .xlsm, .xlsb, .xls u .ods, o arrástrelo al recuadro.",
+        "Si el libro tiene varias hojas, elija una en la lista «Hoja».",
+        "Indique los nombres del elemento raíz y del elemento de fila, y active «Anidar encabezados con puntos» si quiere XML anidado.",
+        "Descargue el archivo .xml o copie el resultado."
+      ],
+      "faq": [
+        {
+          "q": "¿Qué archivos puedo usar?",
+          "a": "Libros de Excel (.xlsx, .xlsm, .xlsb), archivos antiguos de Excel 97–2003 (.xls) y hojas de cálculo OpenDocument (.ods). Los archivos protegidos con contraseña no se pueden leer: quite antes la contraseña en Excel. Para archivos CSV, use CSV a JSON y después JSON a XML."
+        },
+        {
+          "q": "¿Qué aspecto tiene el XML?",
+          "a": "Cada fila bajo el encabezado se convierte en un elemento <row> dentro de <rows>, y cada celda, en un elemento hijo con el nombre del encabezado de su columna. Puede cambiar el nombre de ambos elementos. Los encabezados que empiezan por «@» se convierten en atributos, y las celdas vacías, en elementos vacíos como <note/>."
+        },
+        {
+          "q": "¿Cómo se convierten las fechas y las fórmulas?",
+          "a": "Las celdas con formato de fecha se convierten en texto ISO 8601, por ejemplo 2026-11-20 o 2026-11-20T14:30:00. En las fórmulas se usa el valor guardado en el archivo; las fórmulas no se recalculan."
+        },
+        {
+          "q": "¿Puedo crear XML anidado?",
+          "a": "Sí. Active «Anidar encabezados con puntos»: una columna llamada address.city se convierte en <address><city>…</city></address>, y columnas numeradas como phone.0 y phone.1 se convierten en elementos <phone> repetidos."
+        }
+      ]
+    },
+    "json-to-csv": {
+      "slug": "json-a-csv",
+      "name": "JSON a CSV",
+      "short": "Datos anidados en columnas con puntos, listo para Excel.",
+      "title": "Convertir JSON a CSV – JSON anidado, sin subir archivos | Klarto",
+      "description": "Convierta JSON o JSON Lines a CSV en su navegador. Los objetos anidados pasan a columnas con puntos; los arrays, a columnas numeradas. Coma o punto y coma, BOM UTF-8.",
+      "h1": "Convertir JSON a CSV",
+      "intro": "Elija un archivo JSON o pegue JSON para obtener un archivo CSV. Los objetos y arrays anidados se aplanan con una regla fija, descrita más abajo.",
+      "steps": [
+        "Elija un archivo JSON o JSON Lines, arrástrelo al recuadro o pegue el JSON y pulse Convertir.",
+        "Revise «Origen de las filas»: si hay un array de nivel superior, se usa tal cual; si no, el array de objetos más grande. Elija otro si es necesario.",
+        "Elija el delimitador y el separador decimal que espera su programa de hojas de cálculo, y mantenga el BOM UTF-8 si abre el archivo en Excel. En esta página vienen preseleccionados el punto y coma y la coma decimal.",
+        "Descargue el archivo .csv o copie el resultado."
+      ],
+      "faq": [
+        {
+          "q": "¿Cómo se aplanan los objetos y arrays anidados?",
+          "a": "Los objetos anidados reciben nombres de columna con puntos, como customer.city. Los arrays reciben columnas numeradas a partir de 0: tags.0, tags.1, y en los arrays de objetos, items.0.sku, items.1.sku. Un objeto o array vacío da una celda vacía. Las columnas aparecen en el orden en que se encuentran por primera vez."
+        },
+        {
+          "q": "¿Qué delimitador debo elegir para Excel?",
+          "a": "Excel para Windows abre los archivos CSV con el separador de listas de la configuración regional. En EE. UU. y el Reino Unido es la coma; en Alemania, Francia, España y muchos otros países es el punto y coma, con la coma como separador decimal. Elija el delimitador y el separador decimal que correspondan. En esta página vienen preseleccionados el punto y coma y la coma decimal, como los espera Excel con la configuración regional de España."
+        },
+        {
+          "q": "¿Por qué las tildes o la ñ se ven mal en Excel?",
+          "a": "Excel para Windows abre un archivo CSV sin marca de orden de bytes con la codificación heredada del sistema en lugar de UTF-8. Mantenga activada la opción «BOM UTF-8 para Excel»: añade tres bytes al inicio que indican a Excel que el archivo es UTF-8."
+        },
+        {
+          "q": "¿Puedo convertir JSON Lines?",
+          "a": "Sí. Un archivo con un valor JSON por línea (JSON Lines, NDJSON) se lee como una lista, y cada línea se convierte en una fila."
+        },
+        {
+          "q": "¿Son seguros los números muy grandes?",
+          "a": "Los navegadores leen los números JSON como valores de coma flotante de 64 bits, así que los números enteros mayores que 9.007.199.254.740.991 se redondean antes de la conversión. La herramienta avisa cuando encuentra uno. Guarde esos identificadores como cadenas entre comillas en el JSON."
+        }
+      ]
+    },
+    "csv-to-json": {
+      "slug": "csv-a-json",
+      "name": "CSV a JSON",
+      "short": "Delimitador automático, campos entre comillas, CSV europeo.",
+      "title": "CSV a JSON – delimitador automático, sin subir archivos | Klarto",
+      "description": "Convierta CSV a JSON en su navegador. Detecta coma, punto y coma o tabulador, y admite campos entre comillas con saltos de línea y la coma decimal. Sin subir archivos.",
+      "h1": "Convertir CSV a JSON",
+      "intro": "Elija un archivo CSV o pegue CSV para obtener un array JSON con un objeto por fila. El delimitador se detecta automáticamente, y funcionan los archivos europeos con punto y coma y coma decimal.",
+      "steps": [
+        "Elija un archivo CSV o TSV, arrástrelo al recuadro o pegue el texto y pulse Convertir.",
+        "Revise el delimitador y la opción de encabezado; las notas bajo el resultado muestran lo que se detectó.",
+        "Decida si los números y true/false deben convertirse en números y booleanos de JSON, y si los encabezados con puntos deben convertirse en objetos anidados.",
+        "Descargue el archivo .json o copie el resultado."
+      ],
+      "faq": [
+        {
+          "q": "¿Cómo se detecta el delimitador?",
+          "a": "La herramienta lee las primeras filas y elige, entre coma, punto y coma, tabulador y barra vertical, el delimitador que da el mismo número de campos (más de uno) en la mayoría de las filas. También puede elegirlo usted."
+        },
+        {
+          "q": "¿Qué valores se convierten en números?",
+          "a": "Con «Convertir números y true/false» activado, valores como 42, -3.5 o 1e3 se convierten en números, y true y false, en booleanos. Los valores con ceros a la izquierda (01067), con un signo más inicial, con más de 15 dígitos o con separadores de miles (1.234,50) siguen siendo cadenas. Con «Automático», el separador decimal es la coma cuando el delimitador es el punto y coma y, si no, el punto. Los campos vacíos se convierten en \"\"."
+        },
+        {
+          "q": "¿Cómo obtengo JSON anidado?",
+          "a": "Active «Anidar encabezados con puntos». Una columna address.city se convierte en {\"address\": {\"city\": …}}, y las columnas tags.0 y tags.1, en un array. Es lo contrario de JSON a CSV."
+        },
+        {
+          "q": "Mi archivo no es UTF-8. ¿Qué ocurre?",
+          "a": "UTF-8 con o sin marca de orden de bytes y UTF-16 con marca de orden de bytes se leen directamente. Un archivo que no es UTF-8 válido se lee como Windows-1252, la codificación habitual de las exportaciones de versiones antiguas de Excel en Europa occidental, y una nota bajo el resultado lo indica."
+        },
+        {
+          "q": "¿Y si alguna fila tiene más o menos campos que el encabezado?",
+          "a": "Los campos que faltan se convierten en \"\", y los campos sobrantes reciben claves llamadas column_N. La primera fila de este tipo se indica con su número de línea."
+        }
+      ]
+    },
+    "json-to-excel": {
+      "slug": "json-a-excel",
+      "name": "JSON a Excel",
+      "short": "Conserva los tipos de JSON; fechas ISO como celdas de fecha.",
+      "title": "Convertir JSON a Excel (XLSX) – sin subir archivos | Klarto",
+      "description": "Convierta JSON o JSON Lines en un archivo .xlsx de Excel en su navegador: números como números, fechas ISO como celdas de fecha y datos anidados en columnas.",
+      "h1": "Convertir JSON a Excel (XLSX)",
+      "intro": "Elija un archivo JSON o pegue JSON para obtener un archivo .xlsx con una fila de encabezado. Los números, los booleanos y las cadenas de JSON conservan su tipo en Excel.",
+      "steps": [
+        "Elija un archivo JSON o JSON Lines, arrástrelo al recuadro o pegue el JSON y pulse Convertir.",
+        "Revise «Origen de las filas» y elija otro array si la herramienta eligió uno que no es el correcto.",
+        "Decida si las cadenas de fecha ISO deben convertirse en fechas de Excel.",
+        "Revise la vista previa y descargue el archivo .xlsx."
+      ],
+      "faq": [
+        {
+          "q": "¿Los números siguen siendo números en Excel?",
+          "a": "Sí. Los números JSON pasan a ser celdas numéricas; true y false, celdas booleanas, y las cadenas, celdas de texto, de modo que \"01067\" conserva su cero inicial."
+        },
+        {
+          "q": "¿Cómo se tratan las fechas?",
+          "a": "Con «Fechas ISO como fechas de Excel» activado, cadenas como 2026-11-20 o 2026-11-20T14:30:00 se convierten en celdas de fecha. Las cadenas con zona horaria, como 2026-11-20T14:30:00Z, siguen siendo texto, porque las celdas de Excel no tienen zona horaria."
+        },
+        {
+          "q": "¿Cómo se distribuyen los objetos y arrays anidados?",
+          "a": "Según la regla de los arrays: los objetos anidados reciben nombres de columna con puntos (customer.city), y los arrays, columnas numeradas (items.0.sku, items.1.sku). Cada elemento de un array recibe sus propias columnas, así que el número de filas sigue siendo el número de registros."
+        },
+        {
+          "q": "¿El archivo de Excel tiene formato?",
+          "a": "Solo un formato mínimo: la fila de encabezado recibe un Autofiltro, y el ancho de las columnas se calcula a partir de las primeras 200 filas. No se definen fuentes, colores ni paneles inmovilizados."
+        }
+      ]
+    },
+    "excel-to-json": {
+      "slug": "excel-a-json",
+      "name": "Excel a JSON",
+      "short": "Filas como objetos, fechas en ISO 8601.",
+      "title": "Convertir Excel a JSON – XLSX, XLS, ODS, sin subir archivos",
+      "description": "Convierta una hoja de Excel a JSON en su navegador: un objeto por fila, los números como números y las fechas en ISO 8601. Lee archivos .xlsx, .xls y .ods.",
+      "h1": "Convertir Excel a JSON",
+      "intro": "Elija un libro para convertir una de sus hojas en un array JSON: la fila de encabezado da las claves, y cada fila de debajo se convierte en un objeto.",
+      "steps": [
+        "Elija un archivo .xlsx, .xlsm, .xlsb, .xls u .ods, o arrástrelo al recuadro.",
+        "Si el libro tiene varias hojas, elija una en la lista «Hoja».",
+        "Desactive «La primera fila es el encabezado» para obtener arrays en lugar de objetos, o active «Anidar encabezados con puntos» para obtener JSON anidado.",
+        "Descargue el archivo .json o copie el resultado."
+      ],
+      "faq": [
+        {
+          "q": "¿Qué aspecto tiene el JSON?",
+          "a": "Un array con un objeto por fila; las claves salen de la fila de encabezado. Los números siguen siendo números y el texto, texto; VERDADERO y FALSO (TRUE y FALSE) pasan a ser true y false, y las celdas vacías, null. Sin fila de encabezado, se obtiene un array de arrays."
+        },
+        {
+          "q": "¿Cómo se convierten las fechas?",
+          "a": "Las celdas con formato de fecha se convierten en cadenas ISO 8601, como \"2026-11-20\" o \"2026-11-20T14:30:00\", y las horas, en \"14:30:00\". No se incluye zona horaria. Los libros que usan el sistema de fechas 1904, habitual en archivos antiguos de Mac, se convierten correctamente. Las fechas escritas como texto se quedan tal como se escribieron."
+        },
+        {
+          "q": "¿Por qué algunos números son cadenas en el JSON?",
+          "a": "Porque la celda guarda el número como texto (Excel marca esas celdas con un triángulo verde). El JSON lo mantiene como cadena, así que no se pierden ceros a la izquierda como el de 01067."
+        },
+        {
+          "q": "¿Qué pasa con las fórmulas, las celdas combinadas y los encabezados vacíos?",
+          "a": "En las fórmulas se usa el valor guardado en el archivo; no se recalcula nada. Una celda combinada solo tiene su valor en la celda superior izquierda. Las celdas de encabezado vacías pasan a llamarse column_N, y los encabezados duplicados reciben _2, _3."
+        }
+      ]
+    },
+    "csv-to-excel": {
+      "slug": "csv-a-excel",
+      "name": "CSV a Excel",
+      "short": "Conserva intactos los ceros a la izquierda y los números largos.",
+      "title": "Convertir CSV a Excel (XLSX) – sin subir archivos | Klarto",
+      "description": "Convierta CSV en un .xlsx de Excel en su navegador. Conserva los ceros a la izquierda y los ID largos; admite el punto y coma y la coma decimal. Su archivo no se sube.",
+      "h1": "Convertir CSV a Excel (XLSX)",
+      "intro": "Elija un archivo CSV o pegue CSV para obtener un archivo .xlsx. Los números y las fechas ISO se convierten en celdas reales, mientras que los códigos postales, los números de teléfono y los identificadores largos se quedan exactamente como están escritos.",
+      "steps": [
+        "Elija un archivo CSV o TSV, arrástrelo al recuadro o pegue el texto y pulse Convertir.",
+        "Revise el delimitador y el separador decimal; las notas bajo el resultado muestran los que se usaron.",
+        "Desactive «Detectar números y fechas» si todos los valores deben seguir siendo texto.",
+        "Revise la vista previa y descargue el archivo .xlsx."
+      ],
+      "faq": [
+        {
+          "q": "¿Por qué no abrir el CSV directamente en Excel?",
+          "a": "De forma predeterminada, Excel aplica sus propias reglas al abrir un CSV: los códigos postales como 01067 pierden el cero inicial, los números de más de 15 dígitos pierden sus últimas cifras y el delimitador tiene que coincidir con la configuración regional. En el archivo .xlsx de esta herramienta, los tipos de celda los fijan las reglas de esta página."
+        },
+        {
+          "q": "¿Qué valores se convierten en números y fechas?",
+          "a": "Los números como 24.90, o 24,90 con coma decimal, se convierten en celdas numéricas, y las fechas ISO como 2026-11-20, en celdas de fecha. Los valores con ceros a la izquierda, con un signo más inicial, con más de 15 dígitos o con separadores de miles siguen siendo texto, al igual que otros formatos de fecha, como 20.11.2026."
+        },
+        {
+          "q": "¿Se verán bien las tildes, la ñ y otros caracteres?",
+          "a": "Sí. Un archivo .xlsx guarda el texto como Unicode, así que Excel lo muestra correctamente. El CSV se lee como UTF-8 (con o sin marca de orden de bytes) o como UTF-16 con marca de orden de bytes; un archivo que no es UTF-8 válido se lee como Windows-1252, y el resultado lo indica."
+        },
+        {
+          "q": "¿Qué tamaño puede tener el archivo CSV?",
+          "a": "Convertimos un archivo CSV de 50 MB con 611.452 filas en un archivo .xlsx de 53 MB en un tiempo de 24 a 28 segundos, con unos 2,7 GB de memoria (Node.js en un equipo portátil de 4 núcleos). Los navegadores de los teléfonos tienen mucha menos memoria. Una hoja de Excel admite como máximo 1.048.576 filas."
+        }
+      ]
+    },
+    "xml-validator": {
+      "slug": "validador-xml",
+      "name": "Validador XML",
+      "short": "Comprueba si está bien formado y muestra la línea y la columna.",
+      "title": "Validador XML – ¿está bien formado? Línea y columna del error",
+      "description": "Compruebe en su navegador si un XML está bien formado. El primer error se muestra con su línea, su columna y el texto que lo rodea. Sin subir archivos.",
+      "h1": "Validador XML: comprobar si está bien formado",
+      "intro": "Elija un archivo XML o pegue XML para saber si está bien formado. Si no lo está, verá el primer error con su línea, su columna y una marca en el texto.",
+      "steps": [
+        "Elija un archivo XML, arrástrelo al recuadro o pegue el XML y pulse Comprobar.",
+        "Lea el resultado: «XML bien formado» con un breve resumen, o el primer error con su línea y su columna.",
+        "Corrija el error en la posición marcada y vuelva a comprobar hasta que el documento esté bien formado."
+      ],
+      "faq": [
+        {
+          "q": "¿Qué se comprueba exactamente?",
+          "a": "Que el documento esté bien formado según XML 1.0 y Namespaces in XML 1.0: un único elemento raíz, etiquetas bien anidadas y que coinciden, atributos entre comillas y sin repetir, nombres y caracteres válidos, entidades definidas y prefijos de espacio de nombres declarados."
+        },
+        {
+          "q": "¿Valida contra un esquema XSD o una DTD?",
+          "a": "No. Un documento bien formado puede incumplir su esquema. El validador lee el DOCTYPE y sus declaraciones internas de entidades, pero no comprueba el documento con la DTD y nunca carga archivos externos."
+        },
+        {
+          "q": "¿Qué errores son los más habituales?",
+          "a": "Un & sin escapar en el texto (escriba &amp;), una etiqueta de cierre que no corresponde al elemento abierto, un segundo elemento después de que haya terminado el elemento raíz, y líneas en blanco o espacios antes de la declaración <?xml …?>."
+        },
+        {
+          "q": "¿Cómo se cuentan las líneas y las columnas?",
+          "a": "Las líneas y las columnas se numeran desde 1. CRLF, LF y CR terminan cada uno una línea, y cada carácter (punto de código Unicode) cuenta como una columna. La posición es el punto donde se detectó el problema: para un elemento que nunca se cierra, es el final del archivo, y el mensaje indica la línea en la que se abrió el elemento."
+        }
+      ]
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "Klarto Convert – conversores de XML, JSON, CSV y Excel en su navegador",
+      "description": "Conversores gratuitos de XML, JSON, CSV y Excel, y un validador XML. Todo funciona en su navegador; sus archivos no se suben.",
+      "h1": "Convertir archivos XML, JSON, CSV y Excel en su navegador",
+      "intro": "Diez pequeñas herramientas para archivos de datos de uso diario. Cada una funciona por completo en su navegador, explica sus reglas de conversión y muestra mensajes de error exactos.",
+      "toolsHeading": "Herramientas",
+      "whyHeading": "En qué se diferencian estas herramientas",
+      "why": [
+        "Sus archivos no se suben. La conversión se realiza en su navegador: las páginas solo cargan sus propios archivos desde este sitio web y nunca envían sus datos a ninguna parte. Puede comprobarlo en la pestaña Red de las herramientas para desarrolladores de su navegador.",
+        "Las reglas están escritas en cada página: cómo se convierten los atributos, los arrays, los objetos anidados, los números y las fechas, para que sepa qué esperar.",
+        "Los errores indican la línea y la columna, y explican cómo solucionar el problema."
+      ],
+      "faq": [
+        {
+          "q": "¿Es gratis?",
+          "a": "Sí. Las herramientas son gratuitas y no requieren cuenta."
+        },
+        {
+          "q": "¿Con qué navegadores funciona?",
+          "a": "Las versiones actuales de los navegadores compatibles con módulos de JavaScript en Web Workers. Probamos las páginas en Google Chrome."
+        },
+        {
+          "q": "¿Se guardan mis archivos en algún sitio?",
+          "a": "No. Los archivos se leen en la memoria de la pestaña del navegador y desaparecen al cerrar o recargar la página. No se usan cookies ni herramientas de analítica."
+        }
+      ]
+    },
+    "privacy": {
+      "slug": "privacidad",
+      "title": "Privacidad – Klarto Convert",
+      "description": "Klarto Convert procesa los archivos solo en su navegador. Sin cookies, sin seguimiento, sin analítica. Qué registra el proveedor de alojamiento.",
+      "h1": "Privacidad",
+      "sections": [
+        {
+          "h": "Sus archivos",
+          "p": [
+            "Los archivos que elige y el texto que pega se procesan solo en su navegador, en su dispositivo. No se suben, no se guardan y no se envían ni a nosotros ni a nadie más. Las únicas solicitudes de red que hacen las páginas son las de los propios archivos del sitio web (páginas, estilos y scripts). Su política de seguridad de contenido (Content Security Policy) bloquea las solicitudes que los scripts podrían usar para enviar datos (connect-src 'none'), y esto también se aplica al proceso en segundo plano (Web Worker) que realiza la conversión."
+          ]
+        },
+        {
+          "h": "Sin cookies ni seguimiento",
+          "p": [
+            "Este sitio web no instala cookies, no usa el almacenamiento local y no contiene código de analítica, publicidad ni redes sociales. Todos los archivos del sitio web, incluida la biblioteca SheetJS, se sirven desde este mismo sitio web, no desde servidores de terceros."
+          ]
+        },
+        {
+          "h": "Alojamiento",
+          "p": [
+            "El sitio web está alojado en GitHub Pages, un servicio de GitHub, Inc. Según la documentación de GitHub, la dirección IP de cada visitante de un sitio de GitHub Pages se registra y se almacena por motivos de seguridad. No tenemos acceso a esos registros. Encontrará los detalles en la Declaración general de privacidad de GitHub."
+          ]
+        },
+        {
+          "h": "Quién gestiona este sitio web",
+          "p": [
+            "Klarto Convert es un proyecto de {owner} (Bulgaria). Las preguntas sobre este sitio web pueden plantearse en el gestor de incidencias (issue tracker) del repositorio del código fuente."
+          ]
+        }
+      ],
+      "githubLink": "Declaración general de privacidad de GitHub"
+    },
+    "licenses": {
+      "slug": "licencias",
+      "title": "Licencias – Klarto Convert",
+      "description": "Licencias de Klarto Convert y de las bibliotecas que usa, incluida SheetJS Community Edition (Apache License 2.0).",
+      "h1": "Licencias",
+      "intro": "Klarto Convert usa una biblioteca de terceros. Sus archivos se sirven desde este sitio web, sin modificar.",
+      "own": "El código propio de Klarto Convert se publica bajo la licencia MIT en el repositorio del código fuente.",
+      "libHeading": "SheetJS Community Edition",
+      "lib": "Lee y escribe los archivos de Excel. Versión {version}, Apache License 2.0, © SheetJS LLC. Descargada de cdn.sheetjs.com; SHA-256 de xlsx.mjs: {sha}.",
+      "licenseLink": "Texto completo de la licencia (Apache License 2.0)"
+    },
+    "notFound": {
+      "title": "Página no encontrada – Klarto Convert",
+      "h1": "Página no encontrada",
+      "p": "Esta página no existe. Todas las herramientas aparecen en la página de inicio."
+    }
+  }
+}

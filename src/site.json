@@ -1,0 +1,120 @@
+{
+  "base_url": "https://areykh.github.io/klarto-convert/",
+  "owner": "Arsenii Khmelnytskyi",
+  "repo_url": "https://github.com/areykh/klarto-convert",
+  "languages": ["en", "de", "fr", "es"],
+  "default_language": "en",
+  "google_site_verification": "",
+  "accept": {
+    "xml": ".xml,.xsd,.xsl,.xslt,.svg,.gpx,.kml,.rss,.atom,.xhtml,text/xml,application/xml",
+    "json": ".json,.jsonl,.ndjson,.geojson,application/json",
+    "csv": ".csv,.tsv,.tab,.txt,text/csv,text/tab-separated-values,text/plain",
+    "excel": ".xlsx,.xlsm,.xlsb,.xls,.ods,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel,application/vnd.oasis.opendocument.spreadsheet"
+  },
+  "tools": [
+    {
+      "id": "xml-to-json", "in": "xml", "out": "json", "input": "text", "sample": "xml",
+      "options": [
+        {"name": "consistent", "type": "checkbox", "default": true},
+        {"name": "forceArrays", "type": "text", "default": "", "placeholder": "item, line"},
+        {"name": "indent", "type": "select", "values": ["2", "4", "0"], "default": "2"}
+      ],
+      "rules": ["xmlJson"],
+      "related": ["json-to-xml", "xml-to-excel", "xml-validator"]
+    },
+    {
+      "id": "json-to-xml", "in": "json", "out": "xml", "input": "text", "sample": "json",
+      "options": [
+        {"name": "rootName", "type": "text", "default": "root"},
+        {"name": "itemName", "type": "text", "default": "item"},
+        {"name": "indent", "type": "select", "values": ["2", "4", "0"], "default": "2"},
+        {"name": "declaration", "type": "checkbox", "default": true}
+      ],
+      "rules": ["xmlJson", "jsonToXml"],
+      "related": ["xml-to-json", "json-to-csv", "xml-validator"]
+    },
+    {
+      "id": "xml-to-excel", "in": "xml", "out": "xlsx", "input": "text", "sample": "xml",
+      "options": [
+        {"name": "rows", "type": "dynamic"},
+        {"name": "detect", "type": "checkbox", "default": true}
+      ],
+      "rules": ["xmlJson", "flatten", "excelWrite"],
+      "related": ["excel-to-xml", "xml-to-json", "csv-to-excel"]
+    },
+    {
+      "id": "excel-to-xml", "in": "excel", "out": "xml", "input": "bytes", "sample": "sheet",
+      "options": [
+        {"name": "sheet", "type": "dynamic"},
+        {"name": "header", "type": "checkbox", "default": true},
+        {"name": "nested", "type": "checkbox", "default": false},
+        {"name": "rootName", "type": "text", "default": "rows"},
+        {"name": "rowName", "type": "text", "default": "row"},
+        {"name": "indent", "type": "select", "values": ["2", "4", "0"], "default": "2"}
+      ],
+      "rules": ["excelRead", "excelToXml"],
+      "related": ["xml-to-excel", "excel-to-json", "xml-validator"]
+    },
+    {
+      "id": "json-to-csv", "in": "json", "out": "csv", "input": "text", "sample": "json",
+      "options": [
+        {"name": "rows", "type": "dynamic"},
+        {"name": "delimiter", "type": "select", "values": ["comma", "semicolon", "tab"], "default": {"en": "comma", "*": "semicolon"}},
+        {"name": "decimal", "type": "select", "values": [".", ","], "default": {"en": ".", "*": ","}},
+        {"name": "bom", "type": "checkbox", "default": true}
+      ],
+      "rules": ["flatten", "csvWrite"],
+      "related": ["csv-to-json", "json-to-excel", "json-to-xml"]
+    },
+    {
+      "id": "csv-to-json", "in": "csv", "out": "json", "input": "text", "sample": "csv",
+      "options": [
+        {"name": "delimiter", "type": "select", "values": ["auto", "comma", "semicolon", "tab", "pipe"], "default": "auto"},
+        {"name": "header", "type": "checkbox", "default": true},
+        {"name": "types", "type": "checkbox", "default": true},
+        {"name": "decimal", "type": "select", "values": ["auto", ".", ","], "default": "auto"},
+        {"name": "nested", "type": "checkbox", "default": false},
+        {"name": "indent", "type": "select", "values": ["2", "4", "0"], "default": "2"}
+      ],
+      "rules": ["csvRead", "unflatten"],
+      "related": ["json-to-csv", "csv-to-excel", "excel-to-json"]
+    },
+    {
+      "id": "json-to-excel", "in": "json", "out": "xlsx", "input": "text", "sample": "json",
+      "options": [
+        {"name": "rows", "type": "dynamic"},
+        {"name": "dates", "type": "checkbox", "default": true}
+      ],
+      "rules": ["flatten", "excelWriteJson"],
+      "related": ["excel-to-json", "json-to-csv", "csv-to-excel"]
+    },
+    {
+      "id": "excel-to-json", "in": "excel", "out": "json", "input": "bytes", "sample": "sheet",
+      "options": [
+        {"name": "sheet", "type": "dynamic"},
+        {"name": "header", "type": "checkbox", "default": true},
+        {"name": "nested", "type": "checkbox", "default": false},
+        {"name": "indent", "type": "select", "values": ["2", "4", "0"], "default": "2"}
+      ],
+      "rules": ["excelRead", "unflatten"],
+      "related": ["json-to-excel", "excel-to-xml", "csv-to-json"]
+    },
+    {
+      "id": "csv-to-excel", "in": "csv", "out": "xlsx", "input": "text", "sample": "csv",
+      "options": [
+        {"name": "delimiter", "type": "select", "values": ["auto", "comma", "semicolon", "tab", "pipe"], "default": "auto"},
+        {"name": "header", "type": "checkbox", "default": true},
+        {"name": "detect", "type": "checkbox", "default": true},
+        {"name": "decimal", "type": "select", "values": ["auto", ".", ","], "default": "auto"}
+      ],
+      "rules": ["csvRead", "excelWrite"],
+      "related": ["csv-to-json", "excel-to-json", "json-to-excel"]
+    },
+    {
+      "id": "xml-validator", "in": "xml", "out": "report", "input": "text", "sample": "xml-broken",
+      "options": [],
+      "rules": ["validator"],
+      "related": ["xml-to-json", "xml-to-excel", "json-to-xml"]
+    }
+  ]
+}

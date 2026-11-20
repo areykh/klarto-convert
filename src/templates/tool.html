@@ -1,0 +1,33 @@
+<main id="main" class="wrap">
+<h1>{{h1}}</h1>
+<p class="lead">{{intro}}</p>
+<p class="local">{{local_note}}</p>
+<section class="tool" aria-labelledby="tool-h">
+<h2 id="tool-h" class="vh">{{tool_heading}}</h2>
+<div class="drop" id="drop">
+<input type="file" id="file" class="file-input" accept="{{accept}}">
+<label for="file" class="btn primary">{{choose_file}}</label>
+<span class="drop-hint">{{drop_hint}}</span>
+<span id="file-name" class="file-name"></span>
+</div>
+{{input_controls}}
+{{options}}
+<div id="status" class="status" role="status" aria-live="polite" hidden><span id="status-text"></span><progress id="progress" hidden></progress><button type="button" id="cancel" class="btn small" hidden>{{cancel}}</button></div>
+<section id="output" class="output" hidden aria-label="{{result}}">
+<div class="out-actions"><a id="download" class="btn primary" hidden></a><button type="button" id="copy" class="btn" hidden>{{copy}}</button></div>
+<ul id="notes" class="notes"></ul>
+<label for="out-text" class="vh">{{result_text}}</label>
+<textarea id="out-text" rows="16" readonly hidden spellcheck="false"></textarea>
+<div id="out-table" class="table-wrap" hidden></div>
+<div id="out-report" class="report" hidden></div>
+</section>
+</section>
+<section class="text">
+<h2>{{how_to_heading}}</h2>
+<ol class="steps">{{steps}}</ol>
+<h2>{{rules_heading}}</h2>
+{{rules}}<h2>{{faq_heading}}</h2>
+{{faq}}<h2>{{related_heading}}</h2>
+<ul class="related">{{related}}</ul>
+</section>
+</main>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="{{csp}}">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="color-scheme" content="light dark">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+{{alternates}}
+<link rel="icon" type="image/png" sizes="32x32" href="{{assets}}img/favicon-32.png">
+<link rel="apple-touch-icon" href="{{assets}}img/apple-touch-icon.png">
+<link rel="stylesheet" href="{{assets}}css/style.css">{{verification}}
+</head>
+<body>
+<a class="skip" href="#main">{{skip}}</a>
+<header class="top">
+<div class="wrap top-in">
+<a class="brand" href="{{home}}"><img src="{{assets}}img/logo-64.png" width="32" height="32" alt=""><span>{{site_name}}</span></a>
+<a class="all" href="{{home}}#tools">{{all_tools}}</a>
+<nav class="langs" aria-label="{{language_label}}"><ul>{{languages}}</ul></nav>
+</div>
+</header>
+{{main}}
+<footer class="foot">
+<div class="wrap">
+<p>{{footer_project}}</p>
+<ul><li><a href="{{privacy_href}}">{{privacy}}</a></li><li><a href="{{licenses_href}}">{{licenses}}</a></li><li><a href="{{repo_url}}" rel="noopener">{{source}}</a></li></ul>
+</div>
+</footer>
+{{scripts}}</body>
+</html>
