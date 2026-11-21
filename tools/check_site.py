@@ -77,6 +77,9 @@ def main():
     pages = {}
     for root, _, files in os.walk(docs):
         for fn in files:
+            # Google Search Console verification files are plain text, not site pages (2026-11-21)
+            if re.fullmatch(r'google[0-9a-f]{16}\.html', fn):
+                continue
             if fn.endswith('.html'):
                 p = os.path.join(root, fn)
                 parser = Page()

@@ -404,6 +404,11 @@ def build(out, site):
     with open(os.path.join(out, 'robots.txt'), 'w', encoding='utf-8', newline='\n') as f:
         f.write(f'User-agent: *\nAllow: /\n\nSitemap: {site.base_url}sitemap.xml\n')
     open(os.path.join(out, '.nojekyll'), 'w').close()
+    # verbatim root files (e.g. the Google Search Console verification file, added 2026-11-21)
+    root_dir = os.path.join(SRC, 'root')
+    if os.path.isdir(root_dir):
+        for name in sorted(os.listdir(root_dir)):
+            shutil.copyfile(os.path.join(root_dir, name), os.path.join(out, name))
     return urls
 
 
