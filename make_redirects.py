@@ -16,15 +16,17 @@ moved to /tools/ on 2026-11-27):
   goes to the same path.
 The script stops if an old address has neither, or if a target is not a
 page of the site or is itself redirected (a chain). OUT_DIR is replaced.
-404.html sends any other old address to the same path on kadben.com.
+404.html (make_404.py) sends any other old address to the most relevant page.
 """
 import html
 import os
 import shutil
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import make_404  # noqa: E402
+
 NEW = 'https://kadben.com/'
-OLD_PREFIX = '/klarto-convert/'
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 PAGE = """<!doctype html>
@@ -35,19 +37,6 @@ PAGE = """<!doctype html>
 <script>location.replace({js} + location.search + location.hash);</script>
 </head><body><p>This page has moved to <a href="{url}">{url}</a>.</p></body></html>
 """
-
-NOT_FOUND = """<!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<title>Moved to kadben.com</title>
-<script>
-var p = location.pathname;
-if (p.indexOf('%s') === 0) p = p.slice(%d);
-else p = p.replace(/^\\//, '');
-location.replace('%s' + p + location.search + location.hash);
-</script>
-</head><body><p>Klarto Convert is now <a href="%s">Kadben Tools at kadben.com</a>.</p></body></html>
-""" % (OLD_PREFIX, len(OLD_PREFIX), NEW, NEW)
-
 
 def old_paths():
     with open(os.path.join(HERE, 'old-paths.txt'), encoding='utf-8') as f:
@@ -101,8 +90,7 @@ def main(site_docs, out):
         os.makedirs(folder, exist_ok=True)
         with open(os.path.join(folder, 'index.html'), 'w', encoding='utf-8', newline='\n') as f:
             f.write(PAGE.format(url=html.escape(url, quote=True), js=repr(url)))
-    with open(os.path.join(out, '404.html'), 'w', encoding='utf-8', newline='\n') as f:
-        f.write(NOT_FOUND)
+    make_404.build(out)
     open(os.path.join(out, '.nojekyll'), 'w').close()
     moved = sum(1 for o, n in pages.items() if o != n)
     print(f'{len(pages)} redirect pages ({moved} to a new address, {len(pages) - moved} to the same path) + 404.html in {out}')
