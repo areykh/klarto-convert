@@ -5,12 +5,14 @@ https://areykh.github.io/klarto-convert/<path> -> https://kadben.com/<path>.
 Usage: python3 make_redirects.py SITE_DOCS_DIR OUT_DIR
 Every <path>/index.html of the built site gets a small page with an instant
 meta refresh, rel=canonical and a script that keeps ?query and #hash.
-404.html sends any other old address to the same path on kadben.com.
+404.html (make_404.py) sends any other old address to the most relevant page.
 """
 import html, os, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import make_404  # noqa: E402
+
 NEW = 'https://kadben.com/'
-OLD_PREFIX = '/klarto-convert/'
 
 PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -20,18 +22,6 @@ PAGE = """<!doctype html>
 <script>location.replace({js} + location.search + location.hash);</script>
 </head><body><p>This page has moved to <a href="{url}">{url}</a>.</p></body></html>
 """
-
-NOT_FOUND = """<!doctype html>
-<html lang="en"><head><meta charset="utf-8">
-<title>Moved to kadben.com</title>
-<script>
-var p = location.pathname;
-if (p.indexOf('%s') === 0) p = p.slice(%d);
-else p = p.replace(/^\\//, '');
-location.replace('%s' + p + location.search + location.hash);
-</script>
-</head><body><p>Klarto Convert is now <a href="%s">Kadben Convert at kadben.com</a>.</p></body></html>
-""" % (OLD_PREFIX, len(OLD_PREFIX), NEW, NEW)
 
 def main(src, out):
     n = 0
@@ -46,8 +36,7 @@ def main(src, out):
         with open(os.path.join(out, rel, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(PAGE.format(url=html.escape(url, quote=True), js=repr(url)))
         n += 1
-    with open(os.path.join(out, '404.html'), 'w', encoding='utf-8') as f:
-        f.write(NOT_FOUND)
+    make_404.build(out)
     open(os.path.join(out, '.nojekyll'), 'w').close()
     print(f'{n} redirect pages + 404.html in {out}')
 
