@@ -10,4 +10,4 @@ to the same path on kadben.com.
 
 Rebuild after the site gets new pages:
 
-    python3 make_redirects.py ../tool-site-converters/docs site
+    python3 make_redirects.py ../tool-site-converters/docs docs
